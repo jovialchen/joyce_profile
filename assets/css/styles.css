@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Orbitron', Arial, sans-serif; /* 默认字体为 Orbitron，备用 Arial */
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+#section1 {
+  background-color: #3498db;
+}
+
+#section2 {
+  background-color: #e74c3c;
+}
+
+#section3 {
+  background-color: #2ecc71;
+}
+
+#section4 {
+  background-color: #9b59b6;
+}
+
+
+/*Page 1 Part*/
+
+.title {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498db; /* 添加背景色以区分标题区域 */
+  color: white;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+
+.title p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px; /* 图标之间的间距 */
+}
+
+.social-links a img {
+  width: 40px; /* 设置图标大小 */
+  height: 40px;
+  border-radius: 5px; /* 可选：圆角效果 */
+  transition: transform 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+.social-links a img:hover {
+  transform: scale(1.2); /* 鼠标悬停时放大效果 */
+}
+
+canvas {
+  width: 70%;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+
