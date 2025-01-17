@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 
 // Image for the little man
 const littleManImg = new Image();
-littleManImg.src = "images/littleMan.png"; // 替换为你的小人图片路径
+littleManImg.src = "littleMan.png"; // 替换为你的小人图片路径
 
 // Little man configuration
 const littleMan = {
