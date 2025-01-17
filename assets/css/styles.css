@@ -43,7 +43,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #3498db; /* 添加背景色以区分标题区域 */
-  color: white;
+  color: #f4f4f4;
   text-align: center;
 }
 
@@ -54,9 +54,11 @@ body {
 
 
 .title p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 0;
 }
+
+/*Social Links*/
 .social-links {
   margin-top: 20px;
   display: flex;
@@ -72,6 +74,16 @@ body {
 
 .social-links a img:hover {
   transform: scale(1.2); /* 鼠标悬停时放大效果 */
+}
+.scroll-down-font {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #f4f4f4;
+}
+.bottom-paragraphs {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 canvas {
