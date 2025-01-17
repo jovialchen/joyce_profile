@@ -13,9 +13,13 @@ function scrollHandler(event) {
 
   sections[currentSection].scrollIntoView({ behavior: 'smooth' });
 }
-function touchHandler(event) {
-  const touch = event.touches[0];
-  const delta = touch.clientY - startY;
+
+function touchStartHandler(event) {
+  startY = event.touches[0].clientY;
+}
+
+function touchEndHandler(event) {
+  const delta = endY - startY;
 
   if (delta < -50 && currentSection < sections.length - 1) {
     currentSection++;
@@ -27,6 +31,7 @@ function touchHandler(event) {
 }
 
 let startY = 0;
+let endY = 0;
 
 window.addEventListener('wheel', scrollHandler, { passive: false });
 
@@ -34,5 +39,8 @@ window.addEventListener('touchstart', (event) => {
   startY = event.touches[0].clientY;
 }, { passive: false });
 
-window.addEventListener('touchmove', touchHandler, { passive: false });
-window.addEventListener('wheel', scrollHandler, { passive: false });
+window.addEventListener('touchmove', (event) => {
+  endY = event.touches[0].clientY;
+}, { passive: false });
+
+window.addEventListener('touchend', touchEndHandler, { passive: false });
