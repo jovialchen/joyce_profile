@@ -8,7 +8,8 @@ body {
 }
 
 .section {
-  height: 100vh;images/lex;
+  height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
@@ -36,7 +37,7 @@ body {
 /*Page 1 Part*/
 
 .title {
-  width: 80%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,12 +47,6 @@ body {
   text-align: center;
 }
 
-
-@media (min-width: 768px) {
-  .title {
-    width: 30%; /* 在大屏幕上恢复原始宽度 */
-  }
-}
 .title h1 {
   font-size: 2.5rem;
   margin: 0;
@@ -81,13 +76,8 @@ body {
 
 canvas {
   width: 70%;
-  height: 50%;
+  height: 100%;
   background-color: #f4f4f4;
-}
-@media (min-width: 768px) {
-  canvas {
-    width: 100%; /* 在大屏幕上恢复原始宽度 */
-  }
 }
 
 

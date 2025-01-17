@@ -13,7 +13,6 @@ function scrollHandler(event) {
 
   sections[currentSection].scrollIntoView({ behavior: 'smooth' });
 }
-
 function touchHandler(event) {
   const touch = event.touches[0];
   const delta = touch.clientY - startY;
@@ -36,3 +35,4 @@ window.addEventListener('touchstart', (event) => {
 }, { passive: false });
 
 window.addEventListener('touchmove', touchHandler, { passive: false });
+window.addEventListener('wheel', scrollHandler, { passive: false });
