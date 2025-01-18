@@ -22,7 +22,7 @@ body {
 }
 
 #section2 {
-  background-color: #e74c3c;
+  background-color: #3498db;
 }
 
 #section3 {
@@ -85,4 +85,31 @@ canvas {
   background-color: #f4f4f4;
 }
 
+/*Page 2 Part*/
+.project-container {
+  display: flex; /* 使用Flexbox布局 */
+  flex-wrap: wrap; /* 允许项目换行 */
+  justify-content: center; /* 水平居中对齐 */
+  gap: 20px; /* 项目之间的间距 */
+}
+
+.project {
+  display: block; /* 使链接成为块级元素 */
+  width: 200px; /* 设置图片宽度 */
+  height: 150px; /* 设置图片高度 */
+  border-radius: 10px; /* 圆角 */
+  overflow: hidden; /* 隐藏超出容器的图片部分 */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+  transition: transform 0.2s ease-in-out; /* 添加过渡效果 */
+}
+
+.project:hover {
+  transform: scale(1.05); /* 鼠标悬停时放大 */
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持图片比例并填充容器 */
+}
 
