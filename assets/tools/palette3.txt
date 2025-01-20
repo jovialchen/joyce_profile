@@ -1,0 +1,38 @@
+- Tailwind
+
+{ 'puce': { DEFAULT: '#d88393', 100: '#351117', 200: '#69212f', 300: '#9e3246', 400: '#c74e64', 500: '#d88393', 600: '#e09ca8', 700: '#e7b5be', 800: '#efcdd4', 900: '#f7e6e9' }, 'light_coral': { DEFAULT: '#dd9292', 100: '#381212', 200: '#702323', 300: '#a73535', 400: '#cb5b5b', 500: '#dd9292', 600: '#e4a8a8', 700: '#eabebe', 800: '#f1d4d4', 900: '#f8e9e9' }, 'melon': { DEFAULT: '#e7af9c', 100: '#3e1b0f', 200: '#7d361e', 300: '#bb512d', 400: '#d87d5e', 500: '#e7af9c', 600: '#ecbfb0', 700: '#f1cfc4', 800: '#f5dfd8', 900: '#faefeb' }, 'lemon_chiffon': { DEFAULT: '#fdf5bf', 100: '#564b03', 200: '#ac9605', 300: '#f8d913', 400: '#fae769', 500: '#fdf5bf', 600: '#fdf7cc', 700: '#fef9d8', 800: '#fefbe5', 900: '#fffdf2' }, 'tiffany_blue': { DEFAULT: '#7ec9b9', 100: '#132e28', 200: '#275c50', 300: '#3a8a79', 400: '#50b69f', 500: '#7ec9b9', 600: '#97d4c7', 700: '#b1dfd5', 800: '#cbe9e3', 900: '#e5f4f1' }, 'keppel': { DEFAULT: '#61bda9', 100: '#112823', 200: '#225146', 300: '#33796a', 400: '#43a18d', 500: '#61bda9', 600: '#80caba', 700: '#a0d7cb', 800: '#c0e5dd', 900: '#dff2ee' }, 'air_superiority_blue': { DEFAULT: '#6096ba', 100: '#111e27', 200: '#223c4e', 300: '#335b75', 400: '#44799c', 500: '#6096ba', 600: '#7faac7', 700: '#9fc0d5', 800: '#bfd5e3', 900: '#dfeaf1' }, 'sky_blue': { DEFAULT: '#98c2d7', 100: '#152a35', 200: '#29546a', 300: '#3e7e9f', 400: '#63a3c2', 500: '#98c2d7', 600: '#adcedf', 700: '#c1dae7', 800: '#d6e7ef', 900: '#eaf3f7' }, 'pink_lavender': { DEFAULT: '#cfb0d4', 100: '#2f1b32', 200: '#5f3665', 300: '#8e5197', 400: '#b17db9', 500: '#cfb0d4', 600: '#d9bfdd', 700: '#e2cfe5', 800: '#ecdfee', 900: '#f5eff6' }, 'tea_rose_(red)': { DEFAULT: '#f6cbcc', 100: '#4c0d0f', 200: '#991b1d', 300: '#db3235', 400: '#e87f80', 500: '#f6cbcc', 600: '#f8d5d6', 700: '#f9e0e0', 800: '#fbeaea', 900: '#fdf5f5' } }
+
+- CSV
+
+d88393,dd9292,e7af9c,fdf5bf,7ec9b9,61bda9,6096ba,98c2d7,cfb0d4,f6cbcc
+
+- With #
+
+#d88393, #dd9292, #e7af9c, #fdf5bf, #7ec9b9, #61bda9, #6096ba, #98c2d7, #cfb0d4, #f6cbcc
+
+- Array
+
+["d88393","dd9292","e7af9c","fdf5bf","7ec9b9","61bda9","6096ba","98c2d7","cfb0d4","f6cbcc"]
+
+- Object
+
+{"Puce":"d88393","Light coral":"dd9292","Melon":"e7af9c","Lemon chiffon":"fdf5bf","Tiffany Blue":"7ec9b9","Keppel":"61bda9","Air superiority blue":"6096ba","Sky blue":"98c2d7","Pink lavender":"cfb0d4","Tea rose (red)":"f6cbcc"}
+
+- Extended Array
+
+[{"name":"Puce","hex":"d88393","rgb":[216,131,147],"cmyk":[0,39,32,15],"hsb":[349,39,85],"hsl":[349,52,68],"lab":[64,35,5]},{"name":"Light coral","hex":"dd9292","rgb":[221,146,146],"cmyk":[0,34,34,13],"hsb":[0,34,87],"hsl":[0,52,72],"lab":[68,28,12]},{"name":"Melon","hex":"e7af9c","rgb":[231,175,156],"cmyk":[0,24,32,9],"hsb":[15,32,91],"hsl":[15,61,76],"lab":[76,18,18]},{"name":"Lemon chiffon","hex":"fdf5bf","rgb":[253,245,191],"cmyk":[0,3,25,1],"hsb":[52,25,99],"hsl":[52,94,87],"lab":[96,-6,27]},{"name":"Tiffany Blue","hex":"7ec9b9","rgb":[126,201,185],"cmyk":[37,0,8,21],"hsb":[167,37,79],"hsl":[167,41,64],"lab":[76,-27,1]},{"name":"Keppel","hex":"61bda9","rgb":[97,189,169],"cmyk":[49,0,11,26],"hsb":[167,49,74],"hsl":[167,41,56],"lab":[71,-32,2]},{"name":"Air superiority blue","hex":"6096ba","rgb":[96,150,186],"cmyk":[48,19,0,27],"hsb":[204,48,73],"hsl":[204,39,55],"lab":[60,-8,-24]},{"name":"Sky blue","hex":"98c2d7","rgb":[152,194,215],"cmyk":[29,10,0,16],"hsb":[200,29,84],"hsl":[200,44,72],"lab":[76,-9,-15]},{"name":"Pink lavender","hex":"cfb0d4","rgb":[207,176,212],"cmyk":[2,17,0,17],"hsb":[292,17,83],"hsl":[292,30,76],"lab":[75,18,-14]},{"name":"Tea rose (red)","hex":"f6cbcc","rgb":[246,203,204],"cmyk":[0,17,17,4],"hsb":[359,17,96],"hsl":[359,70,88],"lab":[85,15,5]}]
+
+- XML
+
+<palette>
+  <color name="Puce" hex="d88393" r="216" g="131" b="147" />
+  <color name="Light coral" hex="dd9292" r="221" g="146" b="146" />
+  <color name="Melon" hex="e7af9c" r="231" g="175" b="156" />
+  <color name="Lemon chiffon" hex="fdf5bf" r="253" g="245" b="191" />
+  <color name="Tiffany Blue" hex="7ec9b9" r="126" g="201" b="185" />
+  <color name="Keppel" hex="61bda9" r="97" g="189" b="169" />
+  <color name="Air superiority blue" hex="6096ba" r="96" g="150" b="186" />
+  <color name="Sky blue" hex="98c2d7" r="152" g="194" b="215" />
+  <color name="Pink lavender" hex="cfb0d4" r="207" g="176" b="212" />
+  <color name="Tea rose (red)" hex="f6cbcc" r="246" g="203" b="204" />
+</palette>

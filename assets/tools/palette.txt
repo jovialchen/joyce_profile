@@ -1,0 +1,33 @@
+- Tailwind
+
+{ 'anti-flash_white': { DEFAULT: '#e7ecef', 100: '#263138', 200: '#4b6371', 300: '#7693a4', 400: '#aebfc9', 500: '#e7ecef', 600: '#ebf0f2', 700: '#f0f3f5', 800: '#f5f7f8', 900: '#fafbfc' }, 'yinmn_blue': { DEFAULT: '#274c77', 100: '#080f18', 200: '#0f1f30', 300: '#172e48', 400: '#1f3d5f', 500: '#274c77', 600: '#386ead', 700: '#6092cb', 800: '#95b6dd', 900: '#cadbee' }, 'air_superiority_blue': { DEFAULT: '#6096ba', 100: '#111e27', 200: '#223c4e', 300: '#335b75', 400: '#44799c', 500: '#6096ba', 600: '#7faac7', 700: '#9fc0d5', 800: '#bfd5e3', 900: '#dfeaf1' }, 'uranian_blue': { DEFAULT: '#a3cef1', 100: '#0a2b46', 200: '#15578c', 300: '#1f82d2', 400: '#5ca8e7', 500: '#a3cef1', 600: '#b4d7f4', 700: '#c7e1f7', 800: '#daebf9', 900: '#ecf5fc' }, 'battleship_gray': { DEFAULT: '#8b8c89', 100: '#1c1c1b', 200: '#373837', 300: '#535352', 400: '#6f6f6d', 500: '#8b8c89', 600: '#a1a2a0', 700: '#b9b9b8', 800: '#d0d1d0', 900: '#e8e8e7' } }
+
+- CSV
+
+e7ecef,274c77,6096ba,a3cef1,8b8c89
+
+- With #
+
+#e7ecef, #274c77, #6096ba, #a3cef1, #8b8c89
+
+- Array
+
+["e7ecef","274c77","6096ba","a3cef1","8b8c89"]
+
+- Object
+
+{"Anti-flash white":"e7ecef","YInMn Blue":"274c77","Air superiority blue":"6096ba","Uranian Blue":"a3cef1","Battleship gray":"8b8c89"}
+
+- Extended Array
+
+[{"name":"Anti-flash white","hex":"e7ecef","rgb":[231,236,239],"cmyk":[3,1,0,6],"hsb":[202,3,94],"hsl":[202,20,92],"lab":[93,-1,-2]},{"name":"YInMn Blue","hex":"274c77","rgb":[39,76,119],"cmyk":[67,36,0,53],"hsb":[212,67,47],"hsl":[212,51,31],"lab":[32,2,-28]},{"name":"Air superiority blue","hex":"6096ba","rgb":[96,150,186],"cmyk":[48,19,0,27],"hsb":[204,48,73],"hsl":[204,39,55],"lab":[60,-8,-24]},{"name":"Uranian Blue","hex":"a3cef1","rgb":[163,206,241],"cmyk":[32,15,0,5],"hsb":[207,32,95],"hsl":[207,74,79],"lab":[81,-6,-22]},{"name":"Battleship gray","hex":"8b8c89","rgb":[139,140,137],"cmyk":[1,0,2,45],"hsb":[80,2,55],"hsl":[80,1,54],"lab":[58,-1,1]}]
+
+- XML
+
+<palette>
+  <color name="Anti-flash white" hex="e7ecef" r="231" g="236" b="239" />
+  <color name="YInMn Blue" hex="274c77" r="39" g="76" b="119" />
+  <color name="Air superiority blue" hex="6096ba" r="96" g="150" b="186" />
+  <color name="Uranian Blue" hex="a3cef1" r="163" g="206" b="241" />
+  <color name="Battleship gray" hex="8b8c89" r="139" g="140" b="137" />
+</palette>
