@@ -190,19 +190,35 @@ canvas {
   transform: scale(1.1);
 }
 .tooltip {
-  display: none;
-  position: absolute;
-  bottom: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 8px;
-  border-radius: 5px;
-  white-space: nowrap;
-  z-index: 10;
+    display: none;
+    position: fixed; /* Use fixed positioning */
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it's on top */
+    width: 40vw; /* 90% of viewport width */
+    max-height: 80vh; /* Limit maximum height */
+    overflow-y: auto; /* Add scrollbar if content overflows */
+    box-sizing: border-box; /* Include padding in width calculation */
+    white-space: normal;
+    text-align: left;
+    overflow-wrap: break-word;
+
 }
 
+.markdown-body {
+    box-sizing: border-box;
+    max-width: 100%; /* Important for responsiveness inside tooltip */
+    margin: 0;
+    padding: 10px;
+}
+.tooltip .markdown-body{
+    padding: 10px;
+}
 .skill:hover .tooltip {
   display: block;
 }
