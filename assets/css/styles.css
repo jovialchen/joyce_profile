@@ -5,20 +5,26 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: 'Orbitron', Arial, sans-serif; /* 默认字体为 Orbitron，备用 Arial */
+  scroll-snap-type: y mandatory; /* Enables snap scrolling */
+  overflow-y: scroll; /* Necessary for snap scrolling to work */
 }
 
 .section {
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   color: #E7ECEF;
   text-align: center;
+  scroll-snap-align: start; /* For smoother scrolling */
+  overflow: hidden; /* Prevents content overflow */
+  flex-direction: column;
 }
 
 #section1 {
-  background-color: #6096BA;
+  background-color: #E7ECEF;
 }
 
 #section2 {
@@ -33,40 +39,19 @@ body {
   background-color: #6096BA;
 }
 
-/*This is for the scroll down pic*/
-.scroll_down_page1 {
-  width: 120px;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #E7ECEF;
-  text-align: center;
-}
-.scroll_down_page2 {
-  width: 120px;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #6096BA;
-  text-align: center;
-}
+/*For scroll down button*/
 .bottom-paragraphs {
   margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
 }
-/*Page 1 Part*/
 
+/*Page 1 Part*/
 .title_page1 {
-  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #6096BA; /* 添加背景色以区分标题区域 */
-  color: #E7ECEF;
+  background-color: #E7ECEF; /* 添加背景色以区分标题区域 */
+  color: #6096BA;
   text-align: center;
 }
 
@@ -102,22 +87,10 @@ body {
 
 
 canvas {
-  width: 70%;
-  height: 100%;
   background-color: #E7ECEF;
 }
 
 /*Page 2 Part*/
-.main_part_page2{
-  width:100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #6096BA;
-  color: #E7ECEF;
-  text-align: center; 
-}
 .title_page2 {
   width: 30%;
   display: flex;
@@ -129,12 +102,14 @@ canvas {
 }
 .title_page2 h1 {
   font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 .project-container {
   display: flex; /* 使用Flexbox布局 */
   flex-wrap: wrap; /* 允许项目换行 */
   justify-content: center; /* 水平居中对齐 */
   gap: 20px; /* 项目之间的间距 */
+  margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
 }
 
 .project {
@@ -158,23 +133,41 @@ canvas {
 }
 
 /*Page 3 Part*/
+.skills-section {
+  display: flex;
+  flex-direction: column; /* 改为 column，使标题和内容垂直排列 */
+  align-items: center; /* 水平居中对齐整个 section */
+  width: 90%; /* 添加宽度限制，例如 90% 的父容器宽度 */
+  max-width: 100vw; /* 可选：添加最大宽度 */
+  margin: 20px auto; /* 上下外边距，左右自动，实现居中 */
+}
 
 .skills-section h1 {
   text-align: center;
-  color: #274C77;
+  color: #6096BA;
+  margin-bottom: 20px; /* 标题和内容之间添加间距 */
+  font-size: 2.5rem;
 }
+
 .skills-category {
+  width: 100%; /* 使 category 填充 section 的宽度 */
   margin-bottom: 20px;
 }
+
 .skills-category h2 {
   margin-bottom: 10px;
-  color: #274C77;
+  color: #6096BA;
+  font-size: 2rem;
 }
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  width: 100%; /* 使 container 填充 category 的宽度 */
+  justify-content: center; /* 使技能在容器中居中 */
 }
+
 .skill {
   position: relative;
   padding: 10px 20px;
@@ -184,6 +177,7 @@ canvas {
   border: none;
   font-size: 14px;
   transition: transform 0.2s;
+  box-sizing: border-box; /* 包含 padding 和 border 在元素总宽度和高度之内 */
 }
 .skill:hover {
   transform: scale(1.1);
@@ -194,13 +188,13 @@ canvas {
     bottom: 20px; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background-color: #8B8C89;
+    color: #E7ECEF;
     padding: 10px;
     border-radius: 5px;
     z-index: 1000; /* Ensure it's on top */
     width: 40vw; /* 90% of viewport width */
-    max-height: 40vh; /* Limit maximum height */
+    max-height: 20vh; /* Limit maximum height */
     overflow-y: auto; /* Add scrollbar if content overflows */
     box-sizing: border-box; /* Include padding in width calculation */
     white-space: normal;
@@ -221,20 +215,24 @@ canvas {
 }
 /* Skill level colors */
 .beginner {
-  background-color: #e74c3c;
+  background-color: #a9e5bb;
 }
 .intermediate {
-  background-color: #f39c12;
+  background-color: #037171;
 }
 .advanced {
-  background-color: #2ecc71;
+  background-color: #bd9391;
 }
 
 .legend {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20px;
   gap: 15px;
+  max-width: 100vw; /* 可选：添加最大宽度 */
+  color: #6096BA;
+  font-size: 14px;
 }
 
 .legend-item {
@@ -243,16 +241,4 @@ canvas {
   height: 20px;
   border-radius: 3px;
   margin-right: 5px;
-}
-
-.legend-item.advanced {
-  background-color: #2ecc71;
-}
-
-.legend-item.intermediate {
-  background-color: #f39c12;
-}
-
-.legend-item.beginner {
-  background-color: #e74c3c;
 }
