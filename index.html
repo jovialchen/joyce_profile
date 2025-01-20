@@ -1,59 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio of Joyce Chen</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-  <div class="section" id="section1">
-    <div class="title">
-        <h1>Joyce Chen</h1>
-        <p>Software Developer/Machine Learning Engineer</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com" target="_blank">
-            <img src="assets/images/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://jovialchen.github.io/taomu" target="_blank">
-            <img src="assets/images/blog.png" alt="Blog">
-            </a>
-            <a href="https://github.com/jovialchen" target="_blank">
-            <img src="assets/images/github.png" alt="GitHub">
-            </a>
-        </div>
-        <div class="bottom-paragraphs">
-          <img src="assets/images/down.gif" width=100px alt="Blog">
-        </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Joyce Chen</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <div class="section" id="section1">
+
+    </div>
+    <script>
+      fetch('sections/section1.html').then(response => response.text()).then(data => {
+          document.getElementById('section1').innerHTML = data;
+          // Load littleMan.js after section1 content is loaded
+          const script = document.createElement('script');
+          script.src = 'assets/js/littleMan.js';
+          document.body.appendChild(script); 
+      });
+    </script>
+    <div class="section" id="section2">
+    </div>
+    <script>
+      fetch('sections/section2.html').then(response => response.text()).then(data => document.getElementById('section2').innerHTML = data);
+    </script>
+    <div class="section" id="section3">
+      <script>
+        fetch('sections/section3.html').then(response => response.text()).then(data => document.getElementById('section3').innerHTML = data);
+      </script>
+    </div>
+    <div class="section" id="section4">
+      <h2>Courses & Certificates</h2>
     </div>
 
-    <canvas id="littleManCanvas"></canvas>
-  </div>
-  
-  <div class="section" id="section2">
-    <div class="'title">
-      <h2>Machine Learning Projects</h2>
-      <div class="project-container">
-        <a href="项目链接1" class="project">
-            <img src="assets/images/blog.png" alt="项目1">logxpert
-        </a>
-        <a href="项目链接2" class="project">
-            <img src="图片链接2" alt="项目2">
-        </a>
-        <a href="项目链接3" class="project">
-            <img src="图片链接3" alt="项目3">
-        </a>
-      </div>
-    </div>
 
-    <div class="bottom-paragraphs">
-      <img src="assets/images/down.gif" width=100px alt="Blog">
-    </div>
-  </div>
-  <div class="section" id="section3">
-      <h2>Skills</h2>
-  </div>
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/littleMan.js"></script>
-</body>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="assets/js/display_markdown.js"></script>
+
+
+  </body>
 </html>
