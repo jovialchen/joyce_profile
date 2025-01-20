@@ -26,7 +26,13 @@
     </script>
     <div class="section" id="section3">
       <script>
-        fetch('sections/section3.html').then(response => response.text()).then(data => document.getElementById('section3').innerHTML = data);
+        fetch('sections/section3.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('section3').innerHTML = html;
+            loadTooltips();
+        });
+
       </script>
     </div>
     <div class="section" id="section4">

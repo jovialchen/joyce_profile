@@ -1,12 +1,4 @@
 // assets/js/section3.js
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('sections/section3.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('section3').innerHTML = html;
-            loadTooltips();
-        });
-
     function loadTooltips() {
         const skills = document.querySelectorAll('.skill');
         const md = window.markdownit();
@@ -30,4 +22,3 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-});

@@ -129,8 +129,6 @@ canvas {
 }
 .title_page2 h1 {
   font-size: 2.5rem;
-  margin-top: 300px;
-  padding: 20px;
 }
 .project-container {
   display: flex; /* 使用Flexbox布局 */
@@ -141,8 +139,8 @@ canvas {
 
 .project {
   display: block; /* 使链接成为块级元素 */
-  width: 400px; /* 设置图片宽度 */
-  height: 250px; /* 设置图片高度 */
+  width: 20vw; /* 设置图片宽度 */
+  height: 30vh; /* 设置图片高度 */
   border-radius: 10px; /* 圆角 */
   overflow: hidden; /* 隐藏超出容器的图片部分 */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 阴影效果 */
@@ -160,14 +158,15 @@ canvas {
 }
 
 /*Page 3 Part*/
+
 .skills-section h1 {
   text-align: center;
   color: #274C77;
 }
-.category {
+.skills-category {
   margin-bottom: 20px;
 }
-.category h2 {
+.skills-category h2 {
   margin-bottom: 10px;
   color: #274C77;
 }
@@ -201,7 +200,7 @@ canvas {
     border-radius: 5px;
     z-index: 1000; /* Ensure it's on top */
     width: 40vw; /* 90% of viewport width */
-    max-height: 80vh; /* Limit maximum height */
+    max-height: 40vh; /* Limit maximum height */
     overflow-y: auto; /* Add scrollbar if content overflows */
     box-sizing: border-box; /* Include padding in width calculation */
     white-space: normal;
@@ -216,9 +215,7 @@ canvas {
     margin: 0;
     padding: 10px;
 }
-.tooltip .markdown-body{
-    padding: 10px;
-}
+
 .skill:hover .tooltip {
   display: block;
 }
