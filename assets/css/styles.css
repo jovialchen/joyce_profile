@@ -31,14 +31,14 @@ body {
   background-color: #6096BA;
 }
 
-#section3 {
-  background-color: #E7ECEF;
-}
 
+#section3 {
+  background-color: #E7ecef;
+  color:#6096BA;
+}
 #section4 {
   background-color: #6096BA;
 }
-
 /*For scroll down button*/
 .bottom-paragraphs {
   margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
@@ -132,99 +132,44 @@ canvas {
   object-fit: contain; /* 保持图片比例并填充容器 */
 }
 
-/*Page 3 Part*/
-.skills-section {
-  display: flex;
-  flex-direction: column; /* 改为 column，使标题和内容垂直排列 */
-  align-items: center; /* 水平居中对齐整个 section */
-  width: 90%; /* 添加宽度限制，例如 90% 的父容器宽度 */
-  max-width: 100vw; /* 可选：添加最大宽度 */
-  margin: 20px auto; /* 上下外边距，左右自动，实现居中 */
-}
 
-.skills-section h1 {
-  text-align: center;
-  color: #6096BA;
-  margin-bottom: 20px; /* 标题和内容之间添加间距 */
-  font-size: 2.5rem;
-}
-
-.skills-category {
-  width: 100%; /* 使 category 填充 section 的宽度 */
-  margin-bottom: 20px;
-}
-
-.skills-category h2 {
-  margin-bottom: 10px;
-  color: #6096BA;
-  font-size: 2rem;
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  width: 100%; /* 使 container 填充 category 的宽度 */
-  justify-content: center; /* 使技能在容器中居中 */
-}
-
-.skill {
-  position: relative;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  font-size: 14px;
-  transition: transform 0.2s;
-  box-sizing: border-box; /* 包含 padding 和 border 在元素总宽度和高度之内 */
-}
-.skill:hover {
-  transform: scale(1.1);
-}
-
-
-
-
-.skill:hover .tooltip {
-  display: block;
-}
-
-/*section4 */
+/*Page 3 Part */
 .ball-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 20px;
   justify-content: center;
+  flex-direction: column;
+}
+/* 让小球排列在一行 */
+.border-group {
+  display: flex;
+  flex-wrap: wrap; /* 允许换行 */
+  gap: 10px; /* 小球之间的间距 */
+  margin-bottom: 20px; /* 每一行容器之间的间距 */
 }
 
 .ball {
-  width: 8vw; /* 使用视口宽度作为单位 */
-  height: 4vw; /* 保持圆形比例 */
-  max-width: 100px; /* 设置最大宽度 */
-  max-height: 50px; /* 设置最大高度 */
-  min-width: 50px; /* 设置最小宽度 */
-  min-height: 25px; /* 设置最小高度 */
-  border-radius: 5vw;
+  padding: 10px 20px;
+  border-radius: 5px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 0.8vw; /* 字体大小跟随圆圈比例 */
-  color: #E7ECEF;
   cursor: pointer;
   position: relative;
+  font-weight: bold;
 }
 
-
-.ball.border-programming { border: 10px solid #D88393; }
-.ball.border-protocol { border: 10px solid #E7AF9C; }
-.ball.border-funarea { border: 10px solid #FDF5BF; }
-.ball.border-lang { border: 10px solid #7EC9B9; }
-.ball.border-tools { border: 10px solid #CFB0D4; }
-.ball.border-soft { border: 10px solid #6A0136; }
-.ball.fill-advanced { background-color: #bd9391; color: #000; }
+.ball.border-programming { border: 5px solid #D88393; }
+.ball.border-protocol { border: 5px solid #E7AF9C; }
+.ball.border-funarea { border: 5px solid #FDF5BF; }
+.ball.border-lang { border: 5px solid #7EC9B9; }
+.ball.border-tools { border: 5px solid #CFB0D4; }
+.ball.border-soft { border: 5px solid #f6cbcc; }
+.ball.fill-advanced { background-color: #03312E;  }
 .ball.fill-intermediate { background-color: #037171; }
 .ball.fill-beginner { background-color: #a9e5bb; }
 
@@ -266,29 +211,29 @@ canvas {
   background-color: #037171;
 }
 .advanced {
-  background-color: #bd9391;
+  background-color: #03312E;
 }
 .programming{
-  border: 10px solid #D88393;
+  border: 5px solid #D88393;
   background-color: transparent;
 }
 .protocol { 
-  border: 10px solid #E7AF9C; 
+  border: 5px solid #E7AF9C; 
   background-color: transparent;
 }
 .funarea { 
-  border: 10px solid #FDF5BF; 
+  border: 5px solid #FDF5BF; 
   background-color: transparent;
 }
 .lang { 
-  border: 10px solid #7EC9B9; 
+  border: 5px solid #7EC9B9; 
   background-color: transparent;
 }
 .tools {
-   border: 10px solid #CFB0D4; 
+   border: 5px solid #CFB0D4; 
     background-color: transparent;
   }
-.soft { border: 10px solid #6A0136; background-color: transparent;}
+.soft { border: 5px solid #f6cbcc; background-color: transparent;}
 
 .legend-item {
   display: inline-block;

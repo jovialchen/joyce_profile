@@ -43,8 +43,13 @@ async function fetchMarkdown(url) {
 }
 
 // Generate balls with rendered Markdown tooltips
-function generateBalls() {
-  ballContainer.innerHTML = ''; // Clear previous balls
+async function generateBalls() {
+  ballContainer.innerHTML = ''; // 清空之前的小球
+
+  // 使用对象按 border 分类
+  const borderGroups = {};
+
+  // 按 border 分类小球
   ballsData.forEach(async (ball) => {
     const div = document.createElement('div');
     div.className = `ball border-${ball.border} fill-${ball.fill}`;
@@ -53,12 +58,21 @@ function generateBalls() {
     // Tooltip
     const tooltip = document.createElement('div');
     tooltip.className = 'tooltip';
-    tooltip.innerHTML = await fetchMarkdown(ball.markdown); // Rendered HTML
+    tooltip.innerHTML = await fetchMarkdown(ball.markdown); // 渲染后的 HTML
     div.appendChild(tooltip);
 
-    ballContainer.appendChild(div);
+    // 按 border 分类
+    const borderClass = `border-${ball.border}`;
+    if (!borderGroups[borderClass]) {
+      borderGroups[borderClass] = document.createElement('div'); // 创建新容器
+      borderGroups[borderClass].className = `border-group ${borderClass}`; // 为容器加上分类标识
+      ballContainer.appendChild(borderGroups[borderClass]); // 添加容器到 ballContainer
+    }
+
+    borderGroups[borderClass].appendChild(div); // 将小球加入对应的容器
   });
 }
+
 
 
 // Filter functionality
