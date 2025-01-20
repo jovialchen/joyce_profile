@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .skills-chart {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        .skill-block {
+            cursor: pointer;
+            transition: transform 0.2s, fill 0.2s;
+        }
+        .skill-block:hover {
+            transform: scale(1.1);
+            fill-opacity: 0.8;
+        }
+        text {
+            pointer-events: none;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .legend-item {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+        .legend-item span {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            display: inline-block;
+        }
+        .advanced { background-color: #4CAF50; }
+        .intermediate { background-color: #FFC107; }
+        .beginner { background-color: #F44336; }
+    </style>
+</head>
+<body>
+    <h1>My Skills</h1>
+    <div class="skills-chart">
+        <svg viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
+            <!-- Big Block for "Function Areas" -->
+            <rect x="50" y="50" width="400" height="250" fill="#e3f2fd" stroke="#90caf9" stroke-width="2" />
+            <text x="250" y="80" text-anchor="middle" font-size="20" fill="#1976d2">Function Areas</text>
+            <!-- Small Blocks inside -->
+            <rect class="skill-block" x="70" y="100" width="100" height="80" fill="#4CAF50" />
+            <text x="120" y="140" text-anchor="middle" font-size="14" fill="white">IMS</text>
+            <rect class="skill-block" x="190" y="100" width="100" height="80" fill="#FFC107" />
+            <text x="240" y="140" text-anchor="middle" font-size="14" fill="white">5G</text>
+            <rect class="skill-block" x="310" y="100" width="100" height="80" fill="#F44336" />
+            <text x="360" y="140" text-anchor="middle" font-size="14" fill="white">ML</text>
+
+            <!-- Big Block for "Programming Languages" -->
+            <rect x="500" y="50" width="400" height="250" fill="#ede7f6" stroke="#b39ddb" stroke-width="2" />
+            <text x="700" y="80" text-anchor="middle" font-size="20" fill="#512da8">Programming Languages</text>
+            <!-- Small Blocks inside -->
+            <rect class="skill-block" x="520" y="100" width="120" height="100" fill="#4CAF50" />
+            <text x="580" y="150" text-anchor="middle" font-size="14" fill="white">Python</text>
+            <rect class="skill-block" x="660" y="100" width="100" height="80" fill="#FFC107" />
+            <text x="710" y="140" text-anchor="middle" font-size="14" fill="white">C/C++</text>
+            <rect class="skill-block" x="780" y="100" width="100" heigh t="80" fill="#F44336" />
+            <text x="830" y="140" text-anchor="middle" font-size="14" fill="white">Robot</text>
+
+            <!-- Big Block for "Tools" -->
+            <rect x="50" y="350" width="400" height="200" fill="#fce4ec" stroke="#f48fb1" stroke-width="2" />
+            <text x="250" y="380" text-anchor="middle" font-size="20" fill="#d81b60">Tools</text>
+            <!-- Small Blocks inside -->
+            <rect class="skill-block" x="70" y="400" width="150" height="100" fill="#4CAF50" />
+            <text x="145" y="460" text-anchor="middle" font-size="14" fill="white">Git</text>
+            <rect class="skill-block" x="240" y="400" width="150" height="100" fill="#FFC107" />
+            <text x="315" y="460" text-anchor="middle" font-size="14" fill="white">JIRA</text>
+        </svg>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item"><span class="advanced"></span> Expert</div>
+        <div class="legend-item"><span class="intermediate"></span> Intermediate</div>
+        <div class="legend-item"><span class="beginner"></span> Beginner</div>
+    </div>
+</body>
+</html>
