@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: 'Orbitron', Arial, sans-serif; /* 默认字体为 Orbitron，备用 Arial */
+  font-family: 'Orbitron', "ZCOOL XiaoWei", Arial, sans-serif; /* 默认字体为 Orbitron，备用 Arial */
   scroll-snap-type: y mandatory; /* Enables snap scrolling */
   overflow-y: scroll; /* Necessary for snap scrolling to work */
 }
+
 
 .section {
   height:100vh;
@@ -16,22 +18,35 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  background-color: #E7ECEF;
-  color: #6096BA;
   text-align: center;
   scroll-snap-align: start; /* For smoother scrolling */
   overflow: hidden; /* Prevents content overflow */
   flex-direction: column;
 }
 
-
+#section1{
+  background-color: #E7ECEF;
+  color: #6096BA;
+}
+#section2{
+  color: #E7ECEF;
+  background-color: #6096BA;
+}
+#section3{
+  background-color: #E7ECEF;
+  color: #6096BA;
+}
+#section4{
+  color: #E7ECEF;
+  background-color: #6096BA;
+}
 
 /*For scroll down button*/
 .bottom-paragraphs {
   margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
@@ -85,10 +100,25 @@ canvas {
   height: 30vh; /* 设置图片高度 */
   border-radius: 20vw; /* 圆角 */
   overflow: hidden; /* 隐藏超出容器的图片部分 */
-  box-shadow: 2px 2px 5px #8B8C89; /* 阴影效果 */
+  box-shadow: 2px 2px 5px #E7ECEF; /* 阴影效果 */
   transition: transform 0.2s ease-in-out; /* 添加过渡效果 */
 }
+.project-1 {
+  background-image: url('../images/project_background.png');
+  background-size: cover;
+}
 
+.project-2 {
+  background-image: url('../images/project2.jpg');
+}
+
+.project-3 {
+  background-image: url('../images/project3.jpg');
+}
+
+.project-4 {
+  background-image: url('../images/project4.jpg');
+}
 .project:hover {
   transform: scale(1.05); /* 鼠标悬停时放大 */
 }
@@ -108,6 +138,7 @@ canvas {
   margin-top: 20px;
   justify-content: center;
   flex-direction: column;
+  margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
 }
 /* 让小球排列在一行 */
 .border-group {
@@ -115,21 +146,21 @@ canvas {
   flex-wrap: wrap; /* 允许换行 */
   gap: 10px; /* 小球之间的间距 */
   margin-bottom: 20px; /* 每一行容器之间的间距 */
+  font-size: 1.2vw;
 }
 
 .group-title {
-  font-size: 1.5rem;
   margin-bottom: 10px;
   color: #6096BA;
 }
 .ball {
-  padding: 3px 10px;
+  height: 1.2vw;
+  padding: 2px 2px;
   border-radius: 5px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 0.6vw; /* 字体大小跟随圆圈比例 */
   cursor: pointer;
   position: relative;
   font-weight: bold;
@@ -163,15 +194,15 @@ canvas {
 
 .filter-options {
   display:flex;
+  flex-wrap:wrap;
   margin-top: 20px;
   text-align: left;
-  font-size: 2vh;
-  flex-direction: row;
+  flex-direction: column;
 }
 /* Skill level colors */
 
 .beginner {
-  background-color: #2E294E;
+  background-color: #274C77;
 }
 .intermediate {
   background-color: #037171;
@@ -187,6 +218,7 @@ canvas {
   height: 20px;
   border-radius: 3px;
   margin-right: 5px;
+  font-size: 2vw
 }
 /* Check box styles */
 .custom-checkbox {
@@ -194,7 +226,7 @@ canvas {
   display: inline-block;
   padding-left: 30px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.2vw;
   padding: 10px;
 }
 
@@ -238,4 +270,54 @@ canvas {
 /* Add hover effect */
 .custom-checkbox:hover .checkbox-checkmark {
   border-color: #98C2D7;
+}
+
+/*Page 4 content*/
+.club-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
+}
+
+.club-link { /* 链接样式，去除默认下划线 */
+    text-decoration: none;
+    color: inherit; /* 继承父元素的颜色 */
+}
+
+.club {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 20vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+}
+
+.club img {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 2px solid #8b8c89;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* 图片的单独过渡 */
+}
+
+.club p {
+    margin: 5px 0;
+    font-size: 1.5vw;
+    line-height: 1.2;
+    transition: color 0.3s ease; /* 名称颜色过渡 */
+}
+
+.club-link:hover .club img { /* hover时放大和添加阴影 */
+    transform: scale(1.1); /* 放大1.1倍 */
+    box-shadow: 0 0 10px #a9e5bb; /* 添加阴影 */
+}
+
+.club-link:hover .club p { /* hover时改变名称颜色 */
+    color: #a9e5bb; /* 更改为蓝色，可自定义 */
 }

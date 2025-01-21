@@ -56,7 +56,7 @@ async function generateBalls() {
       groupContainer.className = `border-group ${borderClass}`;
 
       // 添加标题
-      const title = document.createElement('h2');
+      const title = document.createElement('div');
       title.className = 'group-title';
       title.textContent = borderTitles[borderClass];
       groupContainer.appendChild(title);
@@ -84,20 +84,29 @@ async function generateBalls() {
 
 
 
+// 默认全部选中
+filterOptions.forEach(option => {
+  option.checked = true; // 设置默认选中
+});
+
 // Filter functionality
 filterOptions.forEach(option => {
   option.addEventListener('change', () => {
     const activeFilters = Array.from(filterOptions)
-      .filter(opt => opt.checked)
+      .filter(opt => opt.checked) // 获取当前选中的过滤器
       .map(opt => opt.getAttribute('data-type'));
 
     document.querySelectorAll('.ball').forEach(ball => {
-      ball.style.display = activeFilters.every(filter =>
+      // 如果小球属于任意一个被选中的分类，则显示，否则隐藏
+      ball.style.display = activeFilters.some(filter =>
         ball.classList.contains(filter)
-      ) || activeFilters.length === 0 ? 'flex' : 'none';
+      ) ? 'flex' : 'none';
     });
   });
 });
+
+
+
 
 // Initialize balls
 generateBalls();

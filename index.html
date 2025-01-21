@@ -38,9 +38,10 @@
       });
     </script>
     <div class="section" id="section4">
-      <h2>Clubs</h2>
     </div>
-
+    <script>
+      fetch('sections/section4.html').then(response => response.text()).then(data => document.getElementById('section4').innerHTML = data);
+    </script>
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/markdown-it.min.js"></script>
