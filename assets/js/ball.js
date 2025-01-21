@@ -1,16 +1,6 @@
 const ballContainer = document.querySelector('.ball-container');
 const filterOptions = document.querySelectorAll('.filter');
-/*
-.ball.border-programming { border: 3px solid #D88393; }
-.ball.border-protocol { border: 3px solid #E7AF9C; }
-.ball.border-funarea { border: 3px solid #FDF5BF; }
-.ball.border-lang { border: 3px solid #7EC9B9; }
-.ball.border-tools { border: 3px solid #CFB0D4; }
-.ball.border-soft { border: 3px solid #6A0136; }
-.ball.fill-advanced { background-color: #a9e5bb; color: #000; }
-.ball.fill-intermediate { background-color: #037171; }
-.ball.fill-beginner { background-color: #bd9391; }
-*/
+
 // Sample data for balls
 const ballsData = [
   { text: 'IMS', border: 'funarea', fill: 'advanced', markdown: 'tooltips/ims.md' },
@@ -42,17 +32,42 @@ async function fetchMarkdown(url) {
   return md.render(markdownText); // Render Markdown to HTML
 }
 
-// Generate balls with rendered Markdown tooltips
 async function generateBalls() {
   ballContainer.innerHTML = ''; // 清空之前的小球
 
   // 使用对象按 border 分类
   const borderGroups = {};
+  const borderTitles = {
+    'funarea': 'Function Areas',
+    'programming': 'Programming Languages',
+    'protocol': 'Telecom Protocol Stack',
+    'lang': 'Languages',
+    'tools': 'Tools',
+    'soft': 'Soft Skills'
+  };
 
   // 按 border 分类小球
-  ballsData.forEach(async (ball) => {
+  for (const ball of ballsData) {
+    const borderClass = ball.border;
+
+    // 如果这个分类的容器还不存在，则创建
+    if (!borderGroups[borderClass]) {
+      const groupContainer = document.createElement('div');
+      groupContainer.className = `border-group ${borderClass}`;
+
+      // 添加标题
+      const title = document.createElement('h2');
+      title.className = 'group-title';
+      title.textContent = borderTitles[borderClass];
+      groupContainer.appendChild(title);
+
+      borderGroups[borderClass] = groupContainer;
+      ballContainer.appendChild(groupContainer);
+    }
+
+    // 创建小球元素
     const div = document.createElement('div');
-    div.className = `ball border-${ball.border} fill-${ball.fill}`;
+    div.className = `ball ${ball.fill}`;
     div.textContent = ball.text;
 
     // Tooltip
@@ -61,17 +76,11 @@ async function generateBalls() {
     tooltip.innerHTML = await fetchMarkdown(ball.markdown); // 渲染后的 HTML
     div.appendChild(tooltip);
 
-    // 按 border 分类
-    const borderClass = `border-${ball.border}`;
-    if (!borderGroups[borderClass]) {
-      borderGroups[borderClass] = document.createElement('div'); // 创建新容器
-      borderGroups[borderClass].className = `border-group ${borderClass}`; // 为容器加上分类标识
-      ballContainer.appendChild(borderGroups[borderClass]); // 添加容器到 ballContainer
-    }
-
-    borderGroups[borderClass].appendChild(div); // 将小球加入对应的容器
-  });
+    // 将小球加入对应的容器
+    borderGroups[borderClass].appendChild(div);
+  }
 }
+
 
 
 

@@ -10,61 +10,41 @@ body {
 }
 
 .section {
-  height: 100vh;
+  height:100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  color: #E7ECEF;
+  background-color: #E7ECEF;
+  color: #6096BA;
   text-align: center;
   scroll-snap-align: start; /* For smoother scrolling */
   overflow: hidden; /* Prevents content overflow */
   flex-direction: column;
 }
 
-#section1 {
-  background-color: #E7ECEF;
-}
-
-#section2 {
-  background-color: #6096BA;
-}
 
 
-#section3 {
-  background-color: #E7ecef;
-  color:#6096BA;
-}
-#section4 {
-  background-color: #6096BA;
-}
 /*For scroll down button*/
 .bottom-paragraphs {
   margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
 }
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
 
 /*Page 1 Part*/
-.title_page1 {
+.title{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #E7ECEF; /* 添加背景色以区分标题区域 */
-  color: #6096BA;
   text-align: center;
 }
 
-.title_page1 h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-
-.title_page1 p {
-  font-size: 1rem;
-  margin: 0;
-}
 
 /*Social Links*/
 .social-links {
@@ -91,19 +71,6 @@ canvas {
 }
 
 /*Page 2 Part*/
-.title_page2 {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #E7ECEF;
-  text-align: center;
-}
-.title_page2 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
 .project-container {
   display: flex; /* 使用Flexbox布局 */
   flex-wrap: wrap; /* 允许项目换行 */
@@ -116,9 +83,9 @@ canvas {
   display: block; /* 使链接成为块级元素 */
   width: 20vw; /* 设置图片宽度 */
   height: 30vh; /* 设置图片高度 */
-  border-radius: 10px; /* 圆角 */
+  border-radius: 20vw; /* 圆角 */
   overflow: hidden; /* 隐藏超出容器的图片部分 */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+  box-shadow: 2px 2px 5px #8B8C89; /* 阴影效果 */
   transition: transform 0.2s ease-in-out; /* 添加过渡效果 */
 }
 
@@ -150,28 +117,25 @@ canvas {
   margin-bottom: 20px; /* 每一行容器之间的间距 */
 }
 
+.group-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #6096BA;
+}
 .ball {
-  padding: 10px 20px;
+  padding: 3px 10px;
   border-radius: 5px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 0.8vw; /* 字体大小跟随圆圈比例 */
+  font-size: 0.6vw; /* 字体大小跟随圆圈比例 */
   cursor: pointer;
   position: relative;
   font-weight: bold;
+  color: #E7ECEF
 }
 
-.ball.border-programming { border: 5px solid #D88393; }
-.ball.border-protocol { border: 5px solid #E7AF9C; }
-.ball.border-funarea { border: 5px solid #FDF5BF; }
-.ball.border-lang { border: 5px solid #7EC9B9; }
-.ball.border-tools { border: 5px solid #CFB0D4; }
-.ball.border-soft { border: 5px solid #f6cbcc; }
-.ball.fill-advanced { background-color: #03312E;  }
-.ball.fill-intermediate { background-color: #037171; }
-.ball.fill-beginner { background-color: #a9e5bb; }
 
  .tooltip{
     display: none;
@@ -207,35 +171,15 @@ canvas {
 /* Skill level colors */
 
 .beginner {
-  background-color: #a9e5bb;
+  background-color: #2E294E;
 }
 .intermediate {
   background-color: #037171;
 }
 .advanced {
-  background-color: #03312E;
+  background-color: #6A0136;
 }
-.programming{
-  border: 5px solid #D88393;
-  background-color: transparent;
-}
-.protocol { 
-  border: 5px solid #E7AF9C; 
-  background-color: transparent;
-}
-.funarea { 
-  border: 5px solid #FDF5BF; 
-  background-color: transparent;
-}
-.lang { 
-  border: 5px solid #7EC9B9; 
-  background-color: transparent;
-}
-.tools {
-   border: 5px solid #CFB0D4; 
-    background-color: transparent;
-  }
-.soft { border: 5px solid #f6cbcc; background-color: transparent;}
+
 
 .legend-item {
   display: inline-block;
@@ -244,7 +188,7 @@ canvas {
   border-radius: 3px;
   margin-right: 5px;
 }
-/* Basic styles */
+/* Check box styles */
 .custom-checkbox {
   position: relative;
   display: inline-block;
