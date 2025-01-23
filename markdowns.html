@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Know More About Me...</title>
+  <link rel="stylesheet" href="assets/css/markdown_file.css">
+</head>
+<body>
+  <div id="markdown-content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    function loadMarkdown(filename) {
+      fetch(filename)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`文件 ${filename} 未找到`);
+          }
+          return response.text();
+        })
+        .then(markdownText => {
+          const html = marked.parse(markdownText);
+          document.getElementById('markdown-content').innerHTML = html;
+        })
+        .catch(error => {
+          document.getElementById('markdown-content').innerHTML = `<p style="color: red;">${error.message}</p>`;
+        });
+    }
+
+    // 获取 URL 参数
+    const urlParams = new URLSearchParams(window.location.search);
+    const markdownFile = urlParams.get('file');
+
+    if (markdownFile) {
+        loadMarkdown(markdownFile + ".md"); //根据参数加载md文件
+    } else {
+        loadMarkdown("index.md") //默认加载index.md
+    }
+  </script>
+</body>
+</html>

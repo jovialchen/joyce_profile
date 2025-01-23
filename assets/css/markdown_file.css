@@ -1,0 +1,168 @@
+/* 颜色变量 */
+:root {
+  --puce: #d88393ff;
+  --light-coral: #dd9292ff;
+  --melon: #e7af9cff;
+  --lemon-chiffon: #fdf5bfff;
+  --tiffany-blue: #7ec9b9ff;
+  --keppel: #61bda9ff;
+  --air-superiority-blue: #6096baff;
+  --sky-blue: #98c2d7ff;
+  --pink-lavender: #cfb0d4ff;
+  --tea-rose-red: #f6cbccff;
+  --text-color: #333; /* 深灰色文本 */
+  --background-color: #f8f8f8; /* 浅灰色背景，比纯白更柔和 */
+  --border-color: #ddd; /* 边框颜色 */
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 20px;
+}
+
+#markdown-content {
+  max-width: 900px; /* 略微增加宽度 */
+  margin: 0 auto;
+  padding: 30px; /* 增加内边距 */
+  background-color: white; /* 内容区域白色背景 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  border-radius: 8px; /* 圆角 */
+}
+
+/* 标题 */
+h1 {
+  font-size: 2.2em; /* 略微增大字号 */
+  color: var(--air-superiority-blue);
+  text-align: center;
+  margin-bottom: 1.5em; /* 调整间距 */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, rgba(var(--puce), 0.9), rgba(var(--melon), 0.7)), /* 使用 puce 和 melon 渐变 */
+    radial-gradient(circle at top left, rgba(var(--tiffany-blue), 0.4), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(var(--pink-lavender), 0.3), transparent 50%);
+  background-blend-mode: overlay;
+  padding: 40px; /* 增大内边距 */
+  border-radius: 8px 8px 0 0; /* 上方圆角 */
+}
+
+h2 {
+  font-size: 1.8em;
+  color: var(--keppel);
+  border-bottom: 2px solid var(--sky-blue); /* 使用 sky-blue 作为底边框 */
+  padding-bottom: 0.5em;
+  margin-top: 1.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: var(--air-superiority-blue);
+  margin-top: 1.2em;
+}
+
+/* 段落 */
+p {
+  margin-bottom: 1.2em;
+}
+
+/* 链接 */
+a {
+  color: var(--tiffany-blue);
+  text-decoration: none;
+  transition: color 0.3s ease; /* 添加过渡效果 */
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--tea-rose-red); /* 鼠标悬停时颜色变化 */
+}
+
+/* 代码 */
+code {
+  background-color: var(--lemon-chiffon);
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #555; /* 略微加深代码文字颜色 */
+}
+
+pre code {
+  display: block;
+  padding: 1.2rem;
+  overflow-x: auto;
+  line-height: 1.5;
+  color: #333;
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+/* 列表 */
+ul, ol {
+  padding-left: 25px; /* 增加缩进 */
+  margin-bottom: 1.2em;
+}
+
+li {
+  margin-bottom: 0.6em;
+}
+
+/* 引用 */
+blockquote {
+  border-left: 6px solid var(--melon);
+  padding: 15px 20px; /* 调整内边距 */
+  margin-bottom: 1.5em;
+  font-style: italic;
+  color: #666; /* 略微降低引用文本的对比度 */
+  background-color: rgba(var(--melon), 0.1); /* 添加浅色背景 */
+  border-radius: 4px;
+}
+
+/* 表格 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+  border: 1px solid var(--border-color); /* 表格外边框 */
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--tea-rose-red);
+  color: white; /* 表头文字白色 */
+  font-weight: bold;
+}
+
+/* 分隔线 */
+hr {
+  border: 0;
+  border-top: 2px solid var(--pink-lavender); /* 略微加粗 */
+  margin: 2.5em 0; /* 调整间距 */
+}
+
+/* 图片 */
+img {
+  max-width: 100%;
+  display: block;
+  margin: 1.5em auto;
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
