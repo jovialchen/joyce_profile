@@ -28,8 +28,8 @@ canvas.addEventListener("mousemove", (e) => {
 
 // Function to resize canvas
 function resizeCanvas() {
-  canvas.width = window.innerWidth * 0.7;
-  canvas.height = window.innerHeight*0.8;
+  canvas.width = window.innerWidth * 0.6;
+  canvas.height = window.innerHeight*0.6;
 
   // Update little man's position based on new canvas size
   littleMan.x = canvas.width / 2;

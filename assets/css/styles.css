@@ -29,14 +29,18 @@ body {
   color: #6096BA;
 }
 #section2{
-  color: #E7ECEF;
-  background-color: #6096BA;
-}
-#section3{
   background-color: #E7ECEF;
   color: #6096BA;
 }
+#section3{
+  color: #E7ECEF;
+  background-color: #6096BA;
+}
 #section4{
+  background-color: #E7ECEF;
+  color: #6096BA;
+}
+#section5{
   color: #E7ECEF;
   background-color: #6096BA;
 }
@@ -78,6 +82,7 @@ h1 {
 
 .social-links a img:hover {
   transform: scale(1.2); /* 鼠标悬停时放大效果 */
+  box-shadow: 0 0 10px #a9e5bb; /* 添加阴影 */
 }
 
 
@@ -85,7 +90,7 @@ canvas {
   background-color: #E7ECEF;
 }
 
-/*Page 2 Part*/
+/*Page 3 Part*/
 .project-container {
   display: flex; /* 使用Flexbox布局 */
   flex-wrap: wrap; /* 允许项目换行 */
@@ -121,6 +126,7 @@ canvas {
 }
 .project:hover {
   transform: scale(1.05); /* 鼠标悬停时放大 */
+  box-shadow: 0 0 10px #a9e5bb; /* 添加阴影 */
 }
 
 .project img {
@@ -130,7 +136,7 @@ canvas {
 }
 
 
-/*Page 3 Part */
+/*Page 4 Part */
 .ball-container {
   display: flex;
   flex-wrap: wrap;
@@ -146,7 +152,7 @@ canvas {
   flex-wrap: wrap; /* 允许换行 */
   gap: 10px; /* 小球之间的间距 */
   margin-bottom: 20px; /* 每一行容器之间的间距 */
-  font-size: 1.2vw;
+  font-size: calc(min(2vw, 2vh));
 }
 
 .group-title {
@@ -272,7 +278,7 @@ canvas {
   border-color: #98C2D7;
 }
 
-/*Page 4 content*/
+/*Page 5 content*/
 .club-container {
     display: flex;
     flex-wrap: wrap;
@@ -320,4 +326,33 @@ canvas {
 
 .club-link:hover .club p { /* hover时改变名称颜色 */
     color: #a9e5bb; /* 更改为蓝色，可自定义 */
+}
+
+
+/*introduction page*/
+em {
+    font-style: italic;
+    font-weight: bold;
+}
+
+strong {
+    font-weight: bold;
+    color: #CFB0D4;
+}
+
+
+#book-highlight {
+  padding: 5vw;
+  margin: 20px 0;
+  border: 1px solid #CFB0D4;
+  border-radius: 5px;
+  text-align: left;
+}
+.intro p {
+  font-size: calc(min(2vw, 2vh));
+}
+#flower-container {
+  width: 100%;
+  height: 300px; /* Set your desired height */
+  background: none;
 }
