@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile of Joyce Chen</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.min.js"></script>
     <script src="assets/js/markdown-it.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+	  <script>
+		  ScrollReveal({ duration: 1000 })
+	  </script>
   </head>
   <body>
     <div class="section" id="section1">
@@ -19,13 +24,27 @@
           const script = document.createElement('script');
           script.src = 'assets/js/littleMan.js';
           document.body.appendChild(script); 
+          ScrollReveal().reveal('.headline1')
+          ScrollReveal().reveal('.headline2', { delay: 500 })
+          ScrollReveal().reveal('.social-links', { delay: 1000 })
       });
     </script>
 
     <div class="section" id="section2">
     </div>
     <script>
-      fetch('sections/section2.html').then(response => response.text()).then(data => document.getElementById('section2').innerHTML = data);
+      fetch('sections/section2.html').then(response => response.text()).then( data => {
+        document.getElementById('section2').innerHTML = data;
+        const typed = new Typed('#typed', {
+          stringsElement: '#typed-strings',
+          typeSpeed: 40,
+          backDelay: 1000,
+          loop: true,
+          loopCount: 3,
+          cursorChar: '_'
+        });
+
+      });
     </script>
     <div class="section" id="section3">
     </div>
