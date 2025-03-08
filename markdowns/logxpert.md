@@ -2,20 +2,19 @@
 
 ## My Role
 As the initiator of the LogXpert project, I contributed to the technical direction.  This project began with an idea to improve log analysis, and I took on a technical lead role to help get it started.  The design of LogXpert follows an approach informed by my research into LLMs and log analysis techniques.  The algorithms are based on this research and aim to address key challenges in the field.  I also developed key code components, including parts for model fine-tuning and data processing.  The progress of LogXpert is really a result of teamwork, and I'm glad to have played a part in the technical development.
-## What is LogXpert About?
-**Project Introduction: LogXpert - Intelligent Log Analysis Tool Powered by LLM**
+## Project Introduction: LogXpert - Intelligent Log Analysis Tool Powered by LLM
 
-**1. Project Overview**
+### 1. Project Overview
 
 *   **LogXpert** is an innovative log analysis tool driven by a Large Language Model (LLM), developed by the SBC R&D Team. 
 *   Its primary goal is to **enhance** the efficiency and intelligence of log analysis, and to **reduce** the reliance on expert resources during troubleshooting.
 
-**2. Background and Challenges**
+### 2. Background and Challenges
 
 *   In the SBC R&D domain, analyzing vast amounts of logs is a **time-consuming and stressful** task, especially when dealing with sudden and critical incidents.
 *   **LogXpert's objective** is to leverage the power of LLMs to achieve a faster, smarter, and more efficient log analysis process, **minimizing** manual intervention from engineers in troubleshooting.
 
-**3. Core Functionality and User Workflow**
+### 3. Core Functionality and User Workflow
 
 *   **Engineer User Workflow:**
     *   Users can conveniently upload logs via a **web interface**.
@@ -27,20 +26,20 @@ As the initiator of the LogXpert project, I contributed to the technical directi
     *   Continuous Model Optimization: Performance is continuously improved through **Supervised Fine-Tuning (SFT)** (engineer data) and **Direct Preference Optimization (DPO)** (user feedback).
     *   **NMLP Platform** is utilized for model fine-tuning and validation.
 
-**4. Demo and Use Cases**
+### 4. Demo and Use Cases
 
 *   The project will demonstrate LogXpert's capabilities through **practical use case demos**:
     *   **Use Case A:** Quickly gain insights from log snippets.
     *   **Use Case B:** Conduct in-depth analysis of complete log files.
     *   An **interactive web interface** is provided for log analysis operations.
 
-**5. Data and Model Highlights**
+### 5. Data and Model Highlights
 
 *   **Rigorous Data Curation Pipeline:** Includes steps for data collection, labeling, preprocessing, and dataset preparation to ensure data quality.
 *   **High-Quality Dataset:** Built by an experienced team of engineers, emphasizing data quality, diversity, and quantity (over 1000 entries for SFT, 500+ for DPO).
 *   **Optimized Model Solution:**  Chooses the **fine-tuned LLama 2 70B model** to leverage its capabilities in complex problem solving; employs **QLoRA technology** for efficient fine-tuning under limited resources.
 
-**6. Proof of Concept and Future Outlook**
+### 6. Proof of Concept and Future Outlook
 
 *   **Significant Proof of Concept Results:** LogXpert demonstrates significantly better performance than baseline LLM models in root cause identification for SBC.
 *   **Continuous Improvement Directions:** Committed to addressing the challenges of large log file analysis, exploring larger context windows, and more efficient models (such as Llama 3).
