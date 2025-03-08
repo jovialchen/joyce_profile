@@ -60,3 +60,4 @@ As the initiator of the LogXpert project, I contributed to the technical directi
 * **NSB Expert Club's 2nd LLM Workshop - LogXpert Sharing** - Sole Presenter to 100+ Participants (Dec '23)
 * **SBC Leaders' Team - LogXpert Sharing** - Sole Presenter to 10+ Participants (Nov '23)
 * **SBC Friday Sharing Session - LogXpert Sharing** - Co-presenter (1 of 2) to a large audience of 100+ Participants (Nov '23)
+* **NMLP User Sharing Session - LogXpert Sharing** - Sole Presenter to a large audience of 200+ Participants (Sep '23)
