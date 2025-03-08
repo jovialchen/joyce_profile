@@ -50,8 +50,7 @@ As the initiator of the LogXpert project, I contributed to the technical directi
 * **CNS Hackathon 2023 - Power of Gen** - 1st Place Winner, Oct 2023
 * **CNS Quality Week** - 4th Place Winner, Nov 2023
 
-## Invited Presentations
-### LogXpert Project Presentations & Engagements
+## LogXpert Project Presentations & Engagements
 
 * **CNS P&E Knowledge Transfer Session** -  Co-presenter (1 of 2) to a large audience of 600+ Participants (Feb '25)
 * **CNS Leader's Team Meeting - LogXpert Sharing** - Presented by SBC R&D Director to 30+ Participants (Nov '24)
