@@ -95,13 +95,13 @@ canvas {
   display: flex; /* 使用Flexbox布局 */
   flex-wrap: wrap; /* 允许项目换行 */
   justify-content: center; /* 水平居中对齐 */
-  gap: 20px; /* 项目之间的间距 */
+  gap: 10px; /* 项目之间的间距 */
   margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
 }
 
 .project {
   display: block; /* 使链接成为块级元素 */
-  width: 20vw; /* 设置图片宽度 */
+  width: 15vw; /* 设置图片宽度 */
   height: 30vh; /* 设置图片高度 */
   border-radius: 20vw; /* 圆角 */
   overflow: hidden; /* 隐藏超出容器的图片部分 */
