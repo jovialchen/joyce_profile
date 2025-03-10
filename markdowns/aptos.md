@@ -16,8 +16,10 @@ The competition involved four key challenges, each demanding specific solutions:
 ## Our Innovative Approach: The APT Model
 
 To address these, we created the **APT model**, a novel deep learning framework featuring:
-
+![alt text](aptos1.png)
 *   **APT Embedding:** Custom ResNet18-inspired module for enhanced OCT feature extraction.
+![alt text](aptembedding.png)
+![alt text](apt_performance.png)
 *   **Sequence Embedding:** Transformer-based architecture for inter-image context in cases.
 *   **Specialized Augmentation:** Targeted techniques like "random expansion" and BYOL pretraining augmentations.
 *   **Regression-to-Classification CST:**  Novel approach for improved CST prediction.
