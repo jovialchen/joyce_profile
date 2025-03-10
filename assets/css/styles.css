@@ -109,21 +109,23 @@ canvas {
   transition: transform 0.2s ease-in-out; /* 添加过渡效果 */
 }
 .project-1 {
-  background-image: url('../images/project_background.png');
-  background-size: cover;
+  background-color: #d88393; /* Light gray */
 }
 
 .project-2 {
-  background-image: url('../images/project_background_2.jpeg');
-  background-size: cover;
+  background-color: #7ec9b9; /* Light blue */
 }
 
 .project-3 {
-  background-image: url('../images/project_background_3.png');
+  background-color: #fdf5bf; /* Light green */
 }
 
 .project-4 {
-  background-image: url('../images/project4.jpg');
+  background-color: #cfb0d4; /* Light pink */
+}
+
+.project-5 {
+  background-color: #f6cbcc; /* Light salmon */
 }
 .project:hover {
   transform: scale(1.05); /* 鼠标悬停时放大 */
