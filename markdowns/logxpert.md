@@ -14,9 +14,9 @@ The progress of LogXpert is really a result of teamwork, and I'm glad to have pl
 
 ### 1. Project Overview
 
-*   **LogXpert** is an innovative log analysis tool driven by a Large Language Model (LLM), developed by the SBC R&D Team. 
+*   **LogXpert** is an innovative log analysis tool driven by a Large Language Model (LLM), developed by the SBC R&D Innovation Team. 
 *   Its primary goal is to **enhance** the efficiency and intelligence of log analysis, and to **reduce** the reliance on expert resources during troubleshooting.
-* **LogXpert has now reached over 100 users, demonstrating its growing adoption and impact.**
+* LogXpert has now reached **over 100 users**, demonstrating its growing adoption and impact.
 
 ### 2. Background and Challenges
 
@@ -33,7 +33,7 @@ The progress of LogXpert is really a result of teamwork, and I'm glad to have pl
 
 *   **AI Expert User Workflow:**
     *   Continuous Model Optimization: Performance is continuously improved through **Supervised Fine-Tuning (SFT)** (engineer data) and **Direct Preference Optimization (DPO)** (user feedback).
-    *   **NMLP Platform** is utilized for model fine-tuning and validation.
+    *   **Flyte Console** is utilized for model fine-tuning and validation.
 
 ### 4. Demo and Use Cases
 

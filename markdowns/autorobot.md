@@ -17,11 +17,6 @@
         *   **Multi-Agent System:** Constructed a multi-agent system leveraging the MetaGPT framework, which automatically executes script interfaces, enabling more intelligent test script generation and execution.
         *   **User Interface:** Developed an interactive user interface using Streamlit, allowing users to easily input test requirements and view the generated test scripts.
 
-## Technologies
-
-*   Python
-*   MetaGPT Agent Framework
-*   Streamlit
 
 ## Awards
 
