@@ -1,0 +1,1 @@
+Expert in MEGACO (H.248) protocol with **10+** years of expierence, possessing in-depth knowledge of media gateway control, context modeling, congestion control, codec handling, quality of service, and advanced protocol functionalities within VoIP environments.

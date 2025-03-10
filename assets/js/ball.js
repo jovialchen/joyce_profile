@@ -4,10 +4,10 @@ const filterOptions = document.querySelectorAll('.filter');
 // Sample data for balls
 const ballsData = [
   { text: 'IMS', border: 'funarea', fill: 'advanced', markdown: 'tooltips/ims.md' },
-  { text: '5G', border: 'funarea', fill: 'intermediate', markdown: 'tooltips/ims.md' },
-  { text: 'Machine Learning', border: 'funarea', fill: 'advanced', markdown: 'tooltips/ims.md' },
-  { text: 'MEGACO', border: 'protocol', fill: 'advanced', markdown: 'tooltips/ims.md' },
-    { text: 'Diameter', border: 'protocol', fill: 'intermediate', markdown: 'tooltips/ims.md' },
+  { text: '5G', border: 'funarea', fill: 'intermediate', markdown: 'tooltips/5g.md' },
+  { text: 'Machine Learning', border: 'funarea', fill: 'advanced', markdown: 'tooltips/ml.md' },
+  { text: 'MEGACO', border: 'protocol', fill: 'advanced', markdown: 'tooltips/megaco.md' },
+    { text: 'Diameter', border: 'protocol', fill: 'intermediate', markdown: 'tooltips/diameter.md' },
   { text: 'SIP', border: 'protocol', fill: 'intermediate', markdown: 'tooltips/ims.md' },
   { text: 'C/C++', border: 'programming', fill: 'intermediate', markdown: 'tooltips/ims.md' },
   { text: 'Python', border: 'programming', fill: 'intermediate', markdown: 'tooltips/ims.md' },

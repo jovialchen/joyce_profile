@@ -1,0 +1,1 @@
+**8+ years** of expierience in Diameter protocol, specializing in Rx, Rf, Gq', and Rwp interfaces for advanced policy control, bearer control, and QoS enforcement and charging control in modern mobile networks.
