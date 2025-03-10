@@ -223,8 +223,8 @@ canvas {
 
 .legend-item {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 1vw;
+  height: 1vw;
   border-radius: 3px;
   margin-right: 5px;
   font-size: 2vw
@@ -249,8 +249,8 @@ canvas {
   position: absolute;
   left: 0;
   top: 0;
-  width: 20px;
-  height: 20px;
+  width: 1vw;
+  height: 1vw;
   border: 2px solid #03312E;
   background-color: #E7ECEF;
   border-radius: 5px;
