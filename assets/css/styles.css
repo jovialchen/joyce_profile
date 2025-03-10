@@ -195,6 +195,7 @@ canvas {
     white-space: normal;
     text-align: left;
     overflow-wrap: break-word;
+    font-size: 1vw;
 
 }
 .ball:hover .tooltip {
