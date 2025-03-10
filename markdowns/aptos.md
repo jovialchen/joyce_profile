@@ -29,13 +29,39 @@ To address these, we created the **APT model**, a novel deep learning framework 
 <img src="https://jovialchen.github.io/joyce_profile/markdowns/aptos1.png">
 *   **APT Embedding:** Custom ResNet18-inspired module for enhanced OCT feature extraction.
 <img src="https://jovialchen.github.io/joyce_profile/markdowns/aptembedding.png">
-| Model                      | Score   |
-|---------------------------|---------|
-| Resnet 18                 | 0.9217  |
-| Resnet34                  | 0.9201  |
-| swin-small (batch size: 4) | 0.9073  |
-| swin-tiny                 | 0.9101  |
-| APT Random Embedding (ours)| **0.9319** |
+<table>
+  <caption>IRF Stagel Test Score</caption>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Resnet 18</td>
+      <td>0.9217</td>
+    </tr>
+    <tr>
+      <td>Resnet34</td>
+      <td>0.9201</td>
+    </tr>
+    <tr>
+      <td>swin-small(batch size: 4)</td>
+      <td>0.9073</td>
+    </tr>
+    <tr>
+      <td>swin-tiny</td>
+      <td>0.9101</td>
+    </tr>
+    <tr>
+      <td>APT Random Embedding(ours)</td>
+      <td><strong>0.9319</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+
 *   **Sequence Embedding:** Transformer-based architecture for inter-image context in cases.
 *   **Specialized Augmentation:** Targeted techniques like "random expansion" and BYOL pretraining augmentations.
 *   **Regression-to-Classification CST:**  Novel approach for improved CST prediction.
