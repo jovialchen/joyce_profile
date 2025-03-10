@@ -1,13 +1,22 @@
 # logXpert
 
-## My Role
-As the initiator of the LogXpert project, I contributed to the technical direction.  This project began with an idea to improve log analysis, and I took on a technical lead role to help get it started.  The design of LogXpert follows an approach informed by my research into LLMs and log analysis techniques.  The algorithms are based on this research and aim to address key challenges in the field.  I also developed key code components, including parts for model fine-tuning and data processing.  The progress of LogXpert is really a result of teamwork, and I'm glad to have played a part in the technical development.
+## My Contributions
+
+As the **initiator** of the LogXpert project, I contributed to the **technical direction**. This project began with an idea to improve log analysis, and I took on a **technical lead role** to help get it started.
+
+The design of LogXpert follows an approach informed by my **research into LLMs and log analysis techniques**. The algorithms are based on this research and aim to address key challenges in the field.
+
+I also developed **key code components**, including parts for **model fine-tuning and data processing**.
+
+The progress of LogXpert is really a result of teamwork, and I'm glad to have played a part in the **technical development**.
+
 ## Project Introduction: LogXpert - Intelligent Log Analysis Tool Powered by LLM
 
 ### 1. Project Overview
 
 *   **LogXpert** is an innovative log analysis tool driven by a Large Language Model (LLM), developed by the SBC R&D Team. 
 *   Its primary goal is to **enhance** the efficiency and intelligence of log analysis, and to **reduce** the reliance on expert resources during troubleshooting.
+* **LogXpert has now reached over 100 users, demonstrating its growing adoption and impact.**
 
 ### 2. Background and Challenges
 

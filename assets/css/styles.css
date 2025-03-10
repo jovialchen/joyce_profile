@@ -114,7 +114,8 @@ canvas {
 }
 
 .project-2 {
-  background-image: url('../images/project2.jpg');
+  background-image: url('../images/project_background_2.jpeg');
+  background-size: cover;
 }
 
 .project-3 {
