@@ -4,6 +4,16 @@
 
 This project presents our solution developed for the APTOS Big Data Competition on Aliyun Tianchi, focused on automated retinal disease analysis from OCT images to improve diagnostic accuracy.
 
+We are proud to share our results in the **2021 Tianchi Global AI Series Challenge -- APTOS Asia Pacific Tele-Ophthalmology Society Big Data Competition**:
+
+*   **Preliminary Round:** 2nd Place (out of 10,000+ teams)
+*   **Final Round:** 4th Place
+*   **Final Round (Defense):** 2nd Place
+
+
+This achievement was accomplished as a **two-person team**, highlighting the collaborative effort and effectiveness of the developed APT model.
+
+
 ## Key Challenges in Retinal OCT Analysis
 
 The competition involved four key challenges, each demanding specific solutions:
@@ -16,25 +26,19 @@ The competition involved four key challenges, each demanding specific solutions:
 ## Our Innovative Approach: The APT Model
 
 To address these, we created the **APT model**, a novel deep learning framework featuring:
-![alt text](aptos1.png)
+<img src="https://jovialchen.github.io/joyce_profile/markdowns/aptos1.png">
 *   **APT Embedding:** Custom ResNet18-inspired module for enhanced OCT feature extraction.
-![alt text](aptembedding.png)
-![alt text](apt_performance.png)
+<img src="https://jovialchen.github.io/joyce_profile/markdowns/aptembedding.png">
+| Model                      | Score   |
+|---------------------------|---------|
+| Resnet 18                 | 0.9217  |
+| Resnet34                  | 0.9201  |
+| swin-small (batch size: 4) | 0.9073  |
+| swin-tiny                 | 0.9101  |
+| APT Random Embedding (ours)| **0.9319** |
 *   **Sequence Embedding:** Transformer-based architecture for inter-image context in cases.
 *   **Specialized Augmentation:** Targeted techniques like "random expansion" and BYOL pretraining augmentations.
 *   **Regression-to-Classification CST:**  Novel approach for improved CST prediction.
 *   **Multi-Model Ensembling:** Robust performance through combined predictions.
 *   **BYOL Pretraining:** Self-supervised pretraining for enhanced generalization.
-
-## Competition Results
-
-We are proud to share our results in the **2021 Tianchi Global AI Series Challenge -- APTOS Asia Pacific Tele-Ophthalmology Society Big Data Competition**:
-
-*   **Preliminary Round:** 2nd Place (out of 10,000+ teams)
-*   **Final Round:** 4th Place
-*   **Final Round (Defense):** 2nd Place
-
-
-This achievement was accomplished as a **two-person team**, highlighting the collaborative effort and effectiveness of the developed APT model.
-
 
