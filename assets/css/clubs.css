@@ -3,14 +3,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
-  color: #333;
+  background-color: #f0f0f0; /* 浅灰色 - Modified from #f1faee */
+  color: #666666; /* 中灰色 - Modified from #457b9d */
 }
 
 /* Header Styles */
 header {
-  background-color: #4CAF50;
-  color: #fff;
+  background-color: #a3cef1; /* 银灰色 - Modified from #a8dadc */
+  color: #274c77; /* 深灰色 - Modified from #f1faee */
   padding: 20px;
   text-align: center;
 }
@@ -19,6 +19,7 @@ header .logo img {
   width: 50px;
   height: auto;
   vertical-align: middle;
+  border-radius: 50%; /* 将容器变成圆形 */
 }
 
 header h1 {
@@ -28,46 +29,142 @@ header h1 {
   font-size: 2em;
 }
 
-/* Section Styles */
+/* 全局样式设置 */
+body {
+    font-family: 'Roboto', sans-serif; /* 使用 Roboto 字体 */
+    line-height: 1.6;
+    color: #343a40; /* 深灰色正文文本 */
+    background-color: #fefefe; /* 纯白色或非常浅的灰白色背景，如果需要 */
+    margin: 0; /* 根据需要调整body margin */
+    padding: 0; /* 根据需要调整body padding */
+}
+
+/* Section 样式 */
 section {
-  padding: 20px;
-  margin: 10px;
-  background-color: #fff;
-  border-radius: 5px;
+    padding: 25px;
+    margin: 15px; /* 增加一些外边距 */
+    margin-bottom: 20px;
+    background-color: #f8f9fa; /* 柔和的灰白色背景 */
+    border-radius: 8px; /* 轻微圆角，更柔和 */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.07); /* 更柔和的阴影 */
+    max-width: 1200px; /* 限制section宽度，使其在宽屏幕上更易读 */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section h2 {
-  margin-top: 0;
+    font-size: 2.2em; /* 标题稍大一些 */
+    font-weight: bold;
+    color: #274c77; /* 深灰蓝色标题 */
+    margin-top: 0;
+    margin-bottom: 20px; /* 增加标题下方的空间 */
+    border-bottom: 2px solid #dee2e6; /* 标题下方增加一条细线 */
+    padding-bottom: 0.5em;
 }
 
-/* Books Table Styles */
+/* 表格样式 */
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
+    border: none; /* 移除表格边框 */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05); /* 表格阴影 */
+    border-radius: 8px; /* 表格圆角 */
+    overflow: hidden; /* 确保圆角能正确应用 */
+    margin-bottom: 20px; /* 表格下方增加外边距 */
+    background-color: white; /* 表格背景白色，与section背景区分 */
 }
 
 table th,
 table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+    padding: 12px 15px; /* 增加单元格内边距 */
+    text-align: left;
+    border: none; /* 移除单元格边框 */
 }
 
 table th {
-  background-color: #f2f2f2;
+    background-color: #e9ecef; /* 浅灰色表头背景 */
+    color: #495057; /* 中灰色表头文字 */
+    font-weight: bold;
+    border-bottom: 2px solid #ced4da; /* 表头底部边框 */
 }
 
-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* 斑马条纹效果 */
 }
 
-/* Special styling for hosted books: highlight background */
+table tbody tr:hover {
+    background-color: #a9e5bb; /* 鼠标悬停效果 */
+}
+
+/* 高亮行样式 */
 table tr.hosted {
-  background-color: #fdf5bf;
+    background-color: #fffacd !important; /* 浅柠檬雪纺色高亮 */
 }
 
-/* Host Info Text */
+/* Host Info 文本样式 */
 .host-info {
-  font-style: italic;
-  margin-top: 10px;
+    font-style: italic;
+    margin-top: 15px;
+    color: #495057; /* 中灰色 Host Info */
+    font-size: 0.95em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+        margin: 10px;
+        margin-bottom: 15px;
+    }
+
+    section h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    table th,
+    table td {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 15px;
+        margin: 8px;
+        margin-bottom: 12px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    table th,
+    table td {
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+}
+
+
+
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.arrow-link a {
+  text-decoration: none;
+  color: #61bda9; /* 设置链接颜色 */
+  margin-right: 10px; /* 箭头和链接之间的间距 */
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #dd9292; /* 设置箭头颜色 */
 }
