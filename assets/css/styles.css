@@ -367,3 +367,55 @@ strong {
   box-shadow: 0px 1px;
   font-size: 1.3em;
 }
+
+
+
+/* 整体容器 */
+.certification-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 每个类别区域 */
+.category {
+    margin-bottom: 40px;
+}
+
+/* 类别标题 */
+.category h2 {
+    background: linear-gradient(to right, #007BFF, #0056b3);
+    color: #fff;
+    padding: 10px;
+    margin: 0 0 20px;
+    border-radius: 5px;
+}
+
+/* 课程容器：使用 Flex 布局，支持换行 */
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* 课程盒子 */
+.course-box {
+    display: inline-block;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    padding: 15px 20px;
+    background-color: #fff;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 16px;
+    min-width: 150px;
+    transition: all 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+.course-box:hover {
+    background-color: #e0f0ff;
+    border-color: #0056b3;
+    color: #0056b3;
+}
