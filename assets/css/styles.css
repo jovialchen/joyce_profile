@@ -44,7 +44,10 @@ body {
   color: #E7ECEF;
   background-color: #6096BA;
 }
-
+#section6{
+  background-color: #E7ECEF;
+  color: #6096BA;
+}
 /*For scroll down button*/
 .bottom-paragraphs {
   margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
