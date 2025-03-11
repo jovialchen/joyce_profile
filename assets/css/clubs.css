@@ -1,0 +1,73 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header .logo img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+}
+
+header h1 {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  vertical-align: middle;
+  font-size: 2em;
+}
+
+/* Section Styles */
+section {
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+/* Books Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Special styling for hosted books: highlight background */
+table tr.hosted {
+  background-color: #fdf5bf;
+}
+
+/* Host Info Text */
+.host-info {
+  font-style: italic;
+  margin-top: 10px;
+}
