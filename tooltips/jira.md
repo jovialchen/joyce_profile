@@ -1,0 +1,1 @@
+Solid understanding of Jira as a project management and issue tracking tool. Python scripts to interact with Jira for tasks such as issue creation, data retrieval, workflow automation, and report generation. 

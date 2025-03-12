@@ -29,7 +29,7 @@
           ScrollReveal().reveal('.social-links', { delay: 1000 })
       });
     </script>
-
+<!--  Comment out temp
     <div class="section" id="section2">
     </div>
     <script>
@@ -46,6 +46,7 @@
 
       });
     </script>
+-->
     <div class="section" id="section3">
     </div>
     <script>
@@ -56,7 +57,6 @@
     <script>
       fetch('sections/section4.html').then(response => response.text()).then(data => {
           document.getElementById('section4').innerHTML = data;
-          // Load littleMan.js after section1 content is loaded
           const script = document.createElement('script');
           script.src = 'assets/js/ball.js';
           document.body.appendChild(script); 

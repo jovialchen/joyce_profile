@@ -1,0 +1,1 @@
+Proficient in English listening, speaking, reading, and writing, capable of engaging in technical discussions within professional domains (computer science, telecommunications, machine learning).

@@ -1,0 +1,1 @@
+CAPM® certified (2013), demonstrating a solid grasp of fundamental project management concepts.  Capable of flexibly applying project management tools and techniques in practical work to enhance project execution efficiency and success rate.

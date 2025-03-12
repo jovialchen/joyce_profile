@@ -1,0 +1,1 @@
+Worked as Scrum Master from 2018 to 2020, focusing on serving Agile development teams, fostering team collaboration, removing impediments, and ensuring the smooth operation of Scrum processes. Certified Scrummaster by scrum alliance.

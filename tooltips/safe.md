@@ -1,0 +1,1 @@
+Familiar with Scaled Agile Framework (SAFe) processes and framework, possessing a deep understanding of SAFe principles, practices, and role definitions, with the ability to apply them in large-scale Agile project environments. Certified SAFe Scrum master.

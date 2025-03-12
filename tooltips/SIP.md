@@ -1,0 +1,1 @@
+Developed SIP features for UE registration and call setup, ensuring robust message handling.  Experienced in SDP handling for media session establishment/negotiation in SIP environments.

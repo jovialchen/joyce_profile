@@ -1,0 +1,1 @@
+10+ years C/C++ Application Layer Development.  Solid application development & problem-solving. Large-scale projects (100K+ LOC).  Proficient in complex system design/implementation/Unit Testing.  Handles memory issues (wild pointers, segfaults).  Code quality focused: refactoring, Clean Code.

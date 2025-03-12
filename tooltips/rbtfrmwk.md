@@ -1,0 +1,1 @@
+Farmiliar with Robot Framework for test automation, particularly in telecom product feature testing.  Experienced in developing and executing automated test cases using Robot Framework.  Also applied Robot Framework in machine learning projects for testing script generation.
