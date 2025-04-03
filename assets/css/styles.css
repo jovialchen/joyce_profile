@@ -48,6 +48,10 @@ body {
   background-color: #E7ECEF;
   color: #6096BA;
 }
+#section7{
+  color: #E7ECEF;
+  background-color: #6096BA;
+}
 /*For scroll down button*/
 .bottom-paragraphs {
   margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
@@ -420,6 +424,47 @@ strong {
 /* 鼠标悬停效果 */
 .course-box:hover {
     background-color: #a9e5bb;
+    border-color: #274c77;
+    color: #274c77;
+}
+/* 每个类别区域 */
+.tiny-p-cat {
+    margin-bottom: 4vh;
+}
+/* 类别标题 */
+.tiny-p-cat h2 {
+    background: #f6cbcc;
+    color: #274c77;
+    padding: 0.4vw;
+    margin: 0 0 0.3vw;
+    border-radius: 2vw;
+}
+
+/* 课程容器：使用 Flex 布局，支持换行 */
+.tiny-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center;
+}
+
+/* 课程盒子 */
+.tiny-project-box {
+    display: inline-block;
+    border: 2px solid #a3cef1;
+    border-radius: 1vw;
+    padding: 2px 2px;
+    background-color: #6096BA;
+    color: #e7ecef;
+    text-decoration: none;
+    font-size: 0.8vw;
+    min-width: 1vw;
+    transition: all 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+.tiny-project-box:hover {
+    background-color: #fdf5bf;
     border-color: #274c77;
     color: #274c77;
 }

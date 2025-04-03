@@ -63,6 +63,8 @@ The progress of LogXpert is really a result of teamwork, and I'm glad to have pl
 * **CNS P&E Knowledge Transfer Session** -  Co-presenter (1 of 2) to a large audience of 600+ Participants (Feb '25)
 * **CNS Leader's Team Meeting - LogXpert Sharing** - Presented by SBC R&D Director to 30+ Participants (Nov '24)
 * **ICT Girls Sharing at Ocean University of China** - Co-presenter (1 of 4) to 40+ Students from Ocean University of China (Apr '24)
+    - [link1](https://mp.weixin.qq.com/s/dOwTooXTdcFVG3U69JlfcQ)
+    - [link2](https://mp.weixin.qq.com/s/f4RcrPoWiQ9t63XTLyOV-Q)
 * **NI Services Mini Workshop** - Co-presenter (1 of 2) to 80+ Participants (Apr '24)
 * **Bell Labs' MLA&A Workshop** - Co-presenter (1 of 2) to a large audience of 300+ Participants (Mar '24)
 * **CFX “it's myday” Activity - LogXpert Sharing** - Sole Presenter to 100+ Participants (Dec '23)
