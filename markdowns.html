@@ -20,6 +20,12 @@
         .then(markdownText => {
           const html = marked.parse(markdownText);
           document.getElementById('markdown-content').innerHTML = html;
+          // 在内容加载后告诉 MathJax 处理公式
+          if (typeof MathJax !== 'undefined') {
+            MathJax.typesetPromise()
+              .then(() => console.log('MathJax: Typeset complete'))
+              .catch((err) => console.log('MathJax: Typeset failed: ' + err.message));
+          }
         })
         .catch(error => {
           document.getElementById('markdown-content').innerHTML = `<p style="color: red;">${error.message}</p>`;
@@ -35,6 +41,20 @@
     } else {
         loadMarkdown("index.md") //默认加载index.md
     }
+  </script>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
   </script>
 </body>
 </html>
