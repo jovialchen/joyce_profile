@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>我的旅行足迹</title>
+  <!-- 引入 jsVectorMap 样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css" />
+  <!-- 样式：卡片式布局 + 简洁大方配色 -->
+  <style>
+    :root {
+      --primary: #275C9B;
+      --header-bg: #A6D8FF;
+      --bg: #F0F2F5;
+      --card-bg: #FFFFFF;
+      --text: #333333;
+      --border: #E0E0E0;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+    .header {
+      background-color: var(--header-bg);
+      padding: 40px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+    .header-icon {
+      width: 60px;
+      height: 60px;
+      background-color: var(--card-bg);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      color: var(--primary);
+    }
+    .header h2 {
+      margin: 8px 0 0;
+      font-size: 1.1em;
+      color: #555555;
+    }
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 0 20px;
+      margin-top: 40px;
+    }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      color: var(--primary);
+    }
+    #map {
+      width: 80%;
+      height: 500px;
+      margin: 20px auto 0;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>我的旅行足迹</h1>
+    <h2>Travel Footprint</h2>
+    <div class="header-icon">✈️</div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h3>地图</h3>
+      <div id="map"></div>
+    </div>
+    <div class="card">
+      <h3>旅行照片</h3>
+      <div class="gallery">
+        <img src="https://source.unsplash.com/400x300/?paris" alt="巴黎">
+        <img src="https://source.unsplash.com/400x300/?newyork" alt="纽约">
+        <img src="https://source.unsplash.com/400x300/?beijing" alt="北京">
+        <!-- 你可以替换这些链接为自己的照片路径 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入 jsVectorMap 脚本及世界地图数据 -->
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+  <script>
+    const map = new jsVectorMap({
+      selector: "#map",
+      map: "world",
+      markers: [
+        { name: "北京, 中国", coords: [39.9042, 116.4074] },
+        { name: "海得拉巴, 印度", coords: [17.3850, 78.4867] },
+        { name: "皇后镇, 新西兰", coords: [-45.0312, 168.6626] },
+        { name: "Glenorchy, 新西兰", coords: [-44.8537, 168.3880] },
+        { name: "霍比屯, 新西兰", coords: [-37.8722, 175.6826] },
+        { name: "奥克兰, 新西兰", coords: [-36.8485, 174.7633] },
+        { name: "Fox Glacier, 新西兰", coords: [-43.4647, 170.0184] },
+        { name: "明尼阿波利斯, 美国", coords: [44.9778, -93.2650] },
+        { name: "圣塔芭芭拉, 美国", coords: [34.4208, -119.6982] },
+        { name: "芝加哥, 美国", coords: [41.8781, -87.6298] },
+        { name: "哥伦布 (印第安纳州), 美国", coords: [39.2014, -85.9214] },
+        { name: "代顿 (俄亥俄州), 美国", coords: [39.7589, -84.1916] },
+        { name: "洛杉矶, 美国", coords: [34.0522, -118.2437] },
+        { name: "旧金山, 美国", coords: [37.7749, -122.4194] },
+        { name: "大烟山国家公园, 美国", coords: [35.6532, -83.5070] },
+        { name: "奥兰多, 美国", coords: [28.5383, -81.3792] },
+        { name: "香港, 中国", coords: [22.3193, 114.1694] },
+        { name: "澳门, 中国", coords: [22.1987, 113.5439] },
+        { name: "广州, 中国", coords: [23.1291, 113.2644] },
+        { name: "兰州, 中国", coords: [36.0611, 103.8343] },
+        { name: "西宁, 中国", coords: [36.6171, 101.7782] },
+        { name: "西安, 中国", coords: [34.3416, 108.9398] },
+        { name: "南京, 中国", coords: [32.0603, 118.7969] },
+        { name: "苏州, 中国", coords: [31.2989, 120.5853] },
+        { name: "无锡, 中国", coords: [31.4912, 120.3119] },
+        { name: "上海, 中国", coords: [31.2304, 121.4737] },
+        { name: "桂林, 中国", coords: [25.2742, 110.2902] },
+        { name: "泰安, 中国", coords: [36.1999, 117.0884] },
+        { name: "曲阜, 中国", coords: [35.5809, 116.9865] },
+        { name: "敦煌, 中国", coords: [40.1421, 94.6616] },
+        { name: "张掖, 中国", coords: [38.9259, 100.4498] },
+        { name: "武威, 中国", coords: [37.9283, 102.6412] },
+        { name: "威海, 中国", coords: [37.5131, 122.1204] },
+        { name: "青岛, 中国", coords: [36.0671, 120.3826] },
+        { name: "烟台, 中国", coords: [37.4638, 121.4479] },
+        { name: "济南, 中国", coords: [36.6512, 117.1201] }
+      ],
+      markerStyle: {
+        initial: {
+          fill: "var(--primary)",
+          stroke: "#fff",
+          r: 6
+        }
+      },
+      markerLabelStyle: {
+        initial: {
+          fontFamily: "Arial, sans-serif",
+          fontSize: 12,
+          fill: "var(--text)"
+        }
+      },
+      markersSelectable: true,
+      selectedMarkers: [0, 1, 2]
+    });
+  </script>
+</body>
+</html>
