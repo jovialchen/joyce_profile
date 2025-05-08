@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>我的旅行足迹</title>
+  <title>Joyce's Photo Gallery</title>
   <!-- 引入 jsVectorMap 样式 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css" />
   <!-- 样式：卡片式布局 + 简洁大方配色 -->
@@ -102,23 +102,84 @@
 </head>
 <body>
   <div class="header">
-    <h1>我的旅行足迹</h1>
-    <h2>Travel Footprint</h2>
+    <h1>Joyce's Photo Gallery</h1>
+    <h2>&Travel Footprint</h2>
     <div class="header-icon">✈️</div>
   </div>
   <div class="container">
     <div class="card">
-      <h3>地图</h3>
+      <h3>My Footprints</h3>
       <div id="map"></div>
     </div>
     <div class="card">
-      <h3>旅行照片</h3>
-      <div class="gallery">
-        <img src="https://source.unsplash.com/400x300/?paris" alt="巴黎">
-        <img src="https://source.unsplash.com/400x300/?newyork" alt="纽约">
-        <img src="https://source.unsplash.com/400x300/?beijing" alt="北京">
-        <!-- 你可以替换这些链接为自己的照片路径 -->
-      </div>
+      <h3>My Photos</h3>
+      <div class="gallery" id="imageGallery"></div>
+      <script>
+          // 这里需要手动列出图片文件名
+          /*const imageFiles = [
+              'image1.jpg',
+              'image2.png',
+              // 可以继续添加更多图片文件名
+          ];*/
+          const imageFiles = [
+            '201505青大师院.jpg',
+            '201505青大院里楼下.JPG',
+            '201506卓尔山.JPG',
+            '201506卓尔山上看祁连.JPG',
+            '201506青海湖.JPG',
+            '201506青海湖2.JPG',
+            '201506青海湖日出.JPG',
+            '201507崂山不知是什么村.jpg',
+            '201507崂山青山村1.jpg',
+            '201507崂山青山村2.jpg',
+            '201606麦岛.JPG',
+            '201612Christmas.JPG',
+            '201612HyderabadStreetView.JPG',
+            '201702Valentine.JPG',
+            '201704威海.JPG',
+            '201704威海2.JPG',
+            '201709GlenorchyLagoon.JPG',
+            '201709LakeWanaka.JPG',
+            '201709Mathethon Lake.JPG',
+            '201709Mathethon Lake2.JPG',
+            '201709QueensTown.JPG',
+            '201709Tasman Sea.JPG',
+            '201709WalterPeak.JPG',
+            '201709WalterPeak2.JPG',
+            '201709奥克兰郊外.JPG',
+            '201709霍比屯.JPG',
+            '201803家里的向日葵.JPG',
+            '201805七彩丹霞.JPG',
+            '201805冰沟丹霞.JPG',
+            '201805敦煌市区.JPG',
+            '201805敦煌雅丹2.JPG',
+            '201805敦煌雅丹.JPG',
+            '201805玉门关.JPG',
+            '201812圣诞节.JPG',
+            '201902家里.JPG',
+            '201902故宫.jpg',
+            '201902颐和园.jpg',
+            '201904公司同事养的花.JPG',
+            '201904家里的芍药.JPG',
+            '201905大头的生日蛋糕.JPG',
+            '201912圣诞节鲜花1.JPG',
+            '201912圣诞节鲜花2.JPG',
+            '20200101元旦手工首饰盒.JPG',
+            '20200119同安插花活动.JPG',
+            '20200119同安插花活动2.JPG',
+            '20210406青岛大学校园1.jpg',
+            '20210406青岛大学校园2.jpg',
+            '20210406青岛大学校园3.jpg'
+          ];
+
+          const imageGallery = document.getElementById('imageGallery');
+          imageFiles.forEach((imageFile) => {
+              const img = document.createElement('img');
+              img.src = imageFile;
+              img.alt = imageFile;
+              imageGallery.appendChild(img);
+          });
+      </script>
     </div>
   </div>
 
@@ -165,7 +226,14 @@
         { name: "威海, 中国", coords: [37.5131, 122.1204] },
         { name: "青岛, 中国", coords: [36.0671, 120.3826] },
         { name: "烟台, 中国", coords: [37.4638, 121.4479] },
-        { name: "济南, 中国", coords: [36.6512, 117.1201] }
+        { name: "济南, 中国", coords: [36.6512, 117.1201] },
+        { name: "拉萨, 中国", coords: [29.9700, 91.1100] },
+        { name: "沈阳, 中国", coords: [41.81, 123.43] }, 
+        { name: "大连, 中国", coords: [38.92, 121.62] }, 
+        { name: "满洲里, 中国", coords: [49.58, 117.43] }, 
+        { name: "海拉尔, 中国", coords: [49.22, 119.75] }, 
+        { name: "天津, 中国", coords: [39.13, 117.20] }, 
+        { name: "黄山, 中国", coords: [30.19, 118.17] }
       ],
       markerStyle: {
         initial: {
