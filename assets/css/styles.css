@@ -8,6 +8,7 @@ body {
   font-family: 'Orbitron', "ZCOOL XiaoWei", Arial, sans-serif; /* 默认字体为 Orbitron，备用 Arial */
   scroll-snap-type: y mandatory; /* Enables snap scrolling */
   overflow-y: scroll; /* Necessary for snap scrolling to work */
+  scroll-behavior: smooth; /* 可选：启用平滑滚动 */
 }
 
 
@@ -467,4 +468,48 @@ strong {
     background-color: #fdf5bf;
     border-color: #274c77;
     color: #274c77;
+}
+
+
+/* 顶部进度条 */
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 20px;
+  background-color: #61bda9;
+  z-index: 999;
+  transition: width 0.2s ease-out;
+}
+
+.gif-arrow-button {
+  position: fixed;
+  bottom: 4vw;
+  right: 4vw;
+  border: none;
+  border-radius: 50%;
+  background-color: #7ec9b9;
+  padding: 3vw;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;        /* JS 控制 show/hide */
+  width: 10vw;
+  height: 10vw;
+  max-width: 80px;
+  max-height: 80px;
+  min-width: 40px;
+  min-height: 40px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 998;
+
+  /* 新增：Flex 用于让 img 居中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 激活态背景色 */
+.gif-arrow-button.active {
+  background-color: #a3cef1;
 }
