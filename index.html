@@ -29,7 +29,6 @@
           ScrollReveal().reveal('.social-links', { delay: 1000 })
       });
     </script>
-<!--  Comment out temp
     <div class="section" id="section2">
     </div>
     <script>
@@ -46,11 +45,12 @@
 
       });
     </script>
--->
     <div class="section" id="section3">
     </div>
     <script>
-      fetch('sections/section3.html').then(response => response.text()).then(data => document.getElementById('section3').innerHTML = data);
+      fetch('sections/section3.html').then(response => response.text()).then(data => {
+        document.getElementById('section3').innerHTML = data
+      });
     </script>
     <div class="section" id="section4">
     </div>
@@ -67,25 +67,31 @@
     <div class="section" id="section5">
     </div>
     <script>
-      fetch('sections/section5.html').then(response => response.text()).then(data => document.getElementById('section5').innerHTML = data);
+      fetch('sections/section5.html').then(response => response.text()).then(data => {
+       document.getElementById('section5').innerHTML = data
+      });
     </script>
     <div class="section" id="section6">
     </div>
     <script>
-      fetch('sections/section6.html').then(response => response.text()).then(data => document.getElementById('section6').innerHTML = data);
+      fetch('sections/section6.html').then(response => response.text()).then(data => {
+      document.getElementById('section6').innerHTML = data
+    });
     </script>
         <div class="section" id="section7">
     </div>
     <script>
-      fetch('sections/section7.html').then(response => response.text()).then(data => document.getElementById('section7').innerHTML = data);
+      fetch('sections/section7.html').then(response => response.text()).then(data =>{ 
+        document.getElementById('section7').innerHTML = data
+    });
     </script>
 
     <!-- 滚动进度条 -->
     <div id="progressBar"></div>
 
-    <!-- 返回顶部 GIF 按钮 -->
     <button id="gifArrowBtn" class="gif-arrow-button" style="display: none;">
       <img id="gifArrow" src="assets/images/arrow-default.gif" alt="Back to Top">
+      <span>Back to Top</span>
     </button>
 
 

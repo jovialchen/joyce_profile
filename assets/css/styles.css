@@ -2,67 +2,106 @@
 @import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
 
 body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-family: 'Orbitron', "ZCOOL XiaoWei", Arial, sans-serif; /* 默认字体为 Orbitron，备用 Arial */
-  scroll-snap-type: y mandatory; /* Enables snap scrolling */
-  overflow-y: scroll; /* Necessary for snap scrolling to work */
-  scroll-behavior: smooth; /* 可选：启用平滑滚动 */
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; /* 如果需要滚动，不要隐藏 overflow */
+    font-family: 'Orbitron', "ZCOOL XiaoWei", Arial, sans-serif; /* 默认字体为 Orbitron，备用 Arial */
+    scroll-snap-type: y mandatory; /* Enables snap scrolling */
+    overflow-y: scroll; /* Necessary for snap scrolling to work */
+    scroll-behavior: smooth; /* 可选：启用平滑滚动 */
+    background-color: #6096BA; /* 设置统一的背景色给body */
+    color: #E7ECEF; /* 设置统一的文字颜色给body，section会继承 */
 }
-
 
 .section {
-  height:100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  text-align: center;
-  scroll-snap-align: start; /* For smoother scrolling */
-  overflow: hidden; /* Prevents content overflow */
-  flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    align-items: center; /* 水平居中 */
+    /*justify-content: center; /* 垂直居中，但我们希望标题在上面，内容在下面，所以可能需要调整 */
+    font-size: 2rem;
+    text-align: center;
+    scroll-snap-align: start; /* For smoother scrolling */
+    overflow: hidden; /* Prevents content overflow */
+    /* 移除这里的背景色和颜色定义，因为它们现在由 body 统一控制 */
 }
 
-#section1{
-  background-color: #E7ECEF;
-  color: #6096BA;
-}
-#section2{
-  background-color: #E7ECEF;
-  color: #6096BA;
-}
-#section3{
-  color: #E7ECEF;
-  background-color: #6096BA;
-}
-#section4{
-  background-color: #E7ECEF;
-  color: #6096BA;
-}
-#section5{
-  color: #E7ECEF;
-  background-color: #6096BA;
-}
-#section6{
-  background-color: #E7ECEF;
-  color: #6096BA;
-}
-#section7{
-  color: #E7ECEF;
-  background-color: #6096BA;
+/* 移除所有特定 section 的背景色和颜色定义 */
+
+#section1 {
+    height: 100vh;
+    background-color: #E7ECEF;
+    color: #6096BA;
 }
 /*For scroll down button*/
 .bottom-paragraphs {
-  margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
+    margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
 }
+/*
+#section2 {
+    background-color: #E7ECEF;
+    color: #6096BA;
+}
+#section3 {
+    color: #E7ECEF;
+    background-color: #6096BA;
+}
+#section4 {
+    background-color: #E7ECEF;
+    color: #6096BA;
+}
+#section5 {
+    color: #E7ECEF;
+    background-color: #6096BA;
+}
+#section6 {
+    background-color: 6096BA;
+    color: #6096BA;
+}
+#section7 {
+    color: #E7ECEF;
+    background-color: #6096BA;
+}
+*/
+
+/* 为内容创建一个 wrapper */
+
+.content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 30px; /* 内容包装器内边距 */
+    box-sizing: border-box;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #E7ECEF;
+    border-radius: 15px; /* 圆角 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 阴影 */
+    color: #6096BA; /* 如果内容区域需要不同于body的文字颜色 */
+    margin-top: 10vh;
+    margin-bottom: 10vh; /* 如果有 bottom-paragraphs，留出一些间距 */
+}
+
+
 h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 20px; /* 标题和内容之间的间距 */
+    /* 标题的颜色会继承body的颜色，除非你在这里显式设置 */
 }
 
-
+/*Page 1 Part*/
+.title-first{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 /*Page 1 Part*/
 .title{
   display: flex;
@@ -70,6 +109,7 @@ h1 {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: 20vh;
 }
 
 
@@ -104,7 +144,8 @@ canvas {
   flex-wrap: wrap; /* 允许项目换行 */
   justify-content: center; /* 水平居中对齐 */
   gap: 10px; /* 项目之间的间距 */
-  margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
+  margin-top: 10vh; /* 将 bottom-paragraphs 推到父容器的底部 */
+  margin-bottom: 10vh; /* 将 bottom-paragraphs 推到父容器的底部 */
 }
 
 .project {
@@ -152,10 +193,10 @@ canvas {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 20px;
-  justify-content: center;
+  /*margin-top: 20px;*/
+  /*justify-content: center;*/
   flex-direction: column;
-  margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
+  /*margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
 }
 /* 让小球排列在一行 */
 .border-group {
@@ -213,7 +254,7 @@ canvas {
 .filter-options {
   display:flex;
   flex-wrap:wrap;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   text-align: left;
   flex-direction: column;
 }
@@ -297,7 +338,7 @@ canvas {
     justify-content: center;
     gap: 3vw;
     padding: 3vw;
-    margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
+    /*margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
 }
 
 .club-link { /* 链接样式，去除默认下划线 */
@@ -382,7 +423,8 @@ strong {
 .certification-container {
     width: 90%;
     max-width: 60vw;
-    margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
+    /*margin-top: auto; /* 将 bottom-paragraphs 推到父容器的底部 */
+    margin-top : 5vh;
     font-size: 0.8vw;
 }
 
@@ -484,32 +526,43 @@ strong {
 }
 
 .gif-arrow-button {
-  position: fixed;
-  bottom: 4vw;
-  right: 4vw;
-  border: none;
-  border-radius: 50%;
-  background-color: #7ec9b9;
-  padding: 3vw;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: none;        /* JS 控制 show/hide */
-  width: 10vw;
-  height: 10vw;
-  max-width: 80px;
-  max-height: 80px;
-  min-width: 40px;
-  min-height: 40px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 998;
+    /* 移除所有背景、边框、阴影 */
+    background-color: transparent; /* 无背景色 */
+    border: none; /* 无边框 */
+    box-shadow: none; /* 无阴影 */
 
-  /* 新增：Flex 用于让 img 居中 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    /* 布局调整：GIF 在上，文字在下 */
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 (GIF 和文字) */
+    align-items: center;   /* 水平居中 GIF 和文字 */
+    justify-content: center; /* 垂直居中，如果按钮有固定高度 */
+    gap: 5px; /* GIF 和文字之间的间距 */
+
+    /* 文字样式 */
+    color: #e7ecef; /* 文字颜色，确保在页面背景上可见 */
+    font-size: 1rem;
+    cursor: pointer; /* 鼠标悬停显示手型 */
+
+    /* 定位：固定在页面右下角 */
+    position: fixed;
+    bottom: 20px; /* 距离底部 20px */
+    right: 20px;  /* 距离右侧 20px */
+    z-index: 1000; /* 确保按钮在其他内容之上 */
+
+    /* 移除 padding，让 GIF 和文字直接贴合，除非你希望按钮区域更大 */
+    padding: 0;
 }
 
-/* 激活态背景色 */
-.gif-arrow-button.active {
-  background-color: #a3cef1;
+.gif-arrow-button img {
+    height: 10vh; /* 调整 GIF 大小，确保清晰可见且突出 */
+    width: auto;
+    /* 确保 GIF 本身没有额外的边距或边框 */
+    display: block; /* 移除图片默认的底部空间 */
+}
+
+/* 如果你使用了 span 标签来包裹文字 */
+.gif-arrow-button span {
+    font-weight: bold; /* 例如，文字加粗 */
+    /* 任何其他文字样式，例如： */
+    /* text-shadow: 0 0 5px rgba(0,0,0,0.2); /* 可选：给文字添加一点点阴影，使其更清晰 */
 }
