@@ -20,7 +20,7 @@ body {
     flex-direction: column; /* 垂直排列子元素 */
     align-items: center; /* 水平居中 */
     /*justify-content: center; /* 垂直居中，但我们希望标题在上面，内容在下面，所以可能需要调整 */
-    font-size: 2rem;
+    font-size: min(2vw, 2vh);
     text-align: center;
     scroll-snap-align: start; /* For smoother scrolling */
     overflow: hidden; /* Prevents content overflow */
@@ -89,7 +89,7 @@ body {
 
 
 h1 {
-    font-size: 3rem;
+    font-size: min(8vw, 8vh);
     margin-bottom: 20px; /* 标题和内容之间的间距 */
     /* 标题的颜色会继承body的颜色，除非你在这里显式设置 */
 }
@@ -103,12 +103,22 @@ h1 {
   text-align: center;
 }
 /*Page 1 Part*/
+.title-second{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10vh;
+}
+/*Page 1 Part*/
 .title{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 20vh;
   margin-bottom: 20vh;
 }
 
@@ -122,8 +132,8 @@ h1 {
 }
 
 .social-links a img {
-  width: 40px; /* 设置图标大小 */
-  height: 40px;
+  width: min(3vw, 3vh); /* 设置图标大小 */
+  height: min(3vw, 3vh);
   border-radius: 5px; /* 可选：圆角效果 */
   transition: transform 0.3s ease; /* 添加平滑过渡效果 */
 }
