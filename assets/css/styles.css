@@ -236,27 +236,29 @@ canvas {
 }
 
 
- .tooltip{
-    display: none;
-    position: absolute; /* Use fixed positioning */
-    bottom: 20px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #8B8C89;
-    color: #E7ECEF;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1000; /* Ensure it's on top */
-    width: 40vw; /* 90% of viewport width */
-    max-height: 20vh; /* Limit maximum height */
-    overflow-y: auto; /* Add scrollbar if content overflows */
-    box-sizing: border-box; /* Include padding in width calculation */
-    white-space: normal;
-    text-align: left;
-    overflow-wrap: break-word;
-    font-size: 0.8vw;
+.tooltip {
+  display: none;
+  position: absolute;
+  /* 把原来的 bottom/left/transform 拿掉 */
+  /* bottom: 20px;
+     left: 50%;
+     transform: translateX(-50%); */
 
+  background-color: #8B8C89;
+  color: #E7ECEF;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  width: 25vw;
+  max-height: 15vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  white-space: normal;
+  text-align: left;
+  overflow-wrap: break-word;
+  font-size: 0.8vw;
 }
+
 .ball:hover .tooltip {
   display: block;
 }
