@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Joyce's Music Gallery</title>
+  <style>
+    :root {
+      --primary: #275C9B;
+      --header-bg: #A6D8FF;
+      --bg: #F0F2F5;
+      --card-bg: #FFFFFF;
+      --text: #333333;
+      --border: #E0E0E0;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+    .header {
+      background-color: var(--header-bg);
+      padding: 40px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+    .header-icon {
+      width: 60px;
+      height: 60px;
+      background-color: var(--card-bg);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      color: var(--primary);
+    }
+    .header h2 {
+      margin: 8px 0 0;
+      font-size: 1.1em;
+      color: #555555;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      margin-top: 40px;
+    }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      color: var(--primary);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .music-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .music-cover {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .music-title {
+      font-size: 1em;
+      margin: 6px 0;
+      text-align: center;
+      color: var(--primary);
+    }
+    audio {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Joyce's Music Gallery</h1>
+    <h2>I love Piano</h2>
+    <div class="header-icon">🎵</div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h3>Joyce's Piano Practice</h3>
+      <div class="gallery" id="musicGallery"></div>
+    </div>
+  </div>
+
+  <script>
+    const musicList = [
+      { title: "Greensleeves", mp3: "greensleeves.mp3", cover: "greensleeves.png" },
+      { title: "长江之歌", mp3: "music2.mp3", cover: "长江之歌.png"},
+      // 添加更多音乐项
+    ];
+
+    const musicGallery = document.getElementById('musicGallery');
+
+    musicList.forEach(music => {
+      const card = document.createElement('div');
+      card.className = 'music-card';
+
+      const img = document.createElement('img');
+      img.src = music.cover;
+      img.alt = music.title;
+      img.className = 'music-cover';
+
+      const title = document.createElement('div');
+      title.className = 'music-title';
+      title.textContent = music.title;
+
+      const audio = document.createElement('audio');
+      audio.controls = true;
+      const source = document.createElement('source');
+      source.src = music.mp3;
+      source.type = 'audio/mpeg';
+      audio.appendChild(source);
+
+      card.appendChild(img);
+      card.appendChild(title);
+      card.appendChild(audio);
+      musicGallery.appendChild(card);
+    });
+  </script>
+</body>
+</html>
